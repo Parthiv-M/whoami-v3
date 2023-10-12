@@ -4,7 +4,8 @@ const ToggleWrapper = styled.div`
     padding: 10px;
     bottom: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
 `
 
 const Toggler = styled.input`

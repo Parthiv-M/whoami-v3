@@ -152,18 +152,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  .lobster {
-    font-family: 'Lobster Two', cursive;
-  }
-
-  .yeseva {
-    font-family: 'Yeseva One', cursive;
-  }
-
-  .abril {
-    font-family: 'Abril Fatface', cursive;
-  }
-
   img {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -172,52 +160,53 @@ const GlobalStyle = createGlobalStyle`
     user-select: none;
   }
 
-  // move to toggler styles
+  /* Works on Firefox */
+	body {
+		scrollbar-width: thin;
+		scrollbar-color: blue;
+	}
 
-input:checked + .toggle {
-  background-color: #749DD6;
-}
-input:checked + .toggle:before {
-  color: #749ED7;
-}
-input:checked + .toggle:after {
-  color: #ffffff;
-}
-input:checked + .toggle .toggle__handler {
-  background-color: #FFE5B5;
-  transform: translate3d(40px, 0, 0) rotate(0);
-}
-input:checked + .toggle .toggle__handler .crater {
-  opacity: 1;
-}
-input:checked + .toggle .star--1 {
-  width: 2px;
-  height: 2px;
-}
-input:checked + .toggle .star--2 {
-  width: 4px;
-  height: 4px;
-  transform: translate3d(-5px, 0, 0);
-}
-input:checked + .toggle .star--3 {
-  width: 2px;
-  height: 2px;
-  transform: translate3d(-7px, 0, 0);
-}
-input:checked + .toggle .star--4, input:checked + .toggle .star--5, input:checked + .toggle .star--6 {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-input:checked + .toggle .star--4 {
-  transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-input:checked + .toggle .star--5 {
-  transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-input:checked + .toggle .star--6 {
-  transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
+	/* Works on Chrome, Edge, and Safari */
+	body::-webkit-scrollbar {
+		width: 10px;
+	}
 
+	body::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.179);
+	}
+
+	body::-webkit-scrollbar-thumb:hover {
+		background: linear-gradient(270deg, #ff0844 0%, #ffb199 100%);
+	}
+
+  .generic-container {
+    width: 75%;
+
+    @media only screen and (max-width: 762px) {
+      width: 100%;
+    }
+  }
+
+  .across-page {
+    position: absolute;
+    top: 83%;
+    left: 0;
+    z-index: 0;
+    div {
+      height: 1px;
+      width: 100vw;
+      background: ${({ theme }) =>
+          theme.bgColor === '#FFEBF7'
+              ? 'linear-gradient(to right, #FFEBF7 0%, #c3cfe2 50%, #FFEBF7 100%)'
+              : 'linear-gradient(to right, #1A1A1A 0%, black 50%, #1A1A1A 100%)'};
+      margin-top: 1rem;
+      transform: rotate(-15deg)
+    }
+  }
 `
 
 export default GlobalStyle
