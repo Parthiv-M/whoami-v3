@@ -94,7 +94,7 @@ const ProjectLinkArea = styled.div`{
     a {
         text-decoration: underline!important;
         border: 1px solid ${({ theme }) =>
-            theme.bgColor === '#FFEBF7' ? 'lightgrey' : '#434854'};
+            theme.bgColor === '#FFEBF7' ? '#b4b9be' : '#434854'};
         padding: 5px 10px;
     }
     a:hover {

@@ -25,7 +25,6 @@ const IconsCascade = styled.div`
 
     h1 {
         display: inline;
-        font-weight: light;
         font-size: 4rem;
         margin-right: 20px;
         font-weight: bold;
@@ -46,6 +45,10 @@ const IconsCascade = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+
+        h1 {
+            font-size: 3rem;
+        }
     }
 `
 

@@ -137,7 +137,10 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                A simple command line application that lets a user obtain information about packets filtered according to any of the TCP header flags
+                                    A simple command line application that lets
+                                    a user obtain information about packets
+                                    filtered according to any of the TCP header
+                                    flags
                                 </p>
                             </ProjectLinkDescription>
                         </div>
@@ -163,7 +166,11 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                Designed and built the fourth version of the website, as well as helped build and maintain several sister sites—including the events portal and the cybermanipal page, all of which are linked from the main website
+                                    Designed and built the fourth version of the
+                                    website, as well as helped build and
+                                    maintain several sister sites—including the
+                                    events portal and the cybermanipal page, all
+                                    of which are linked from the main website
                                 </p>
                             </ProjectLinkDescription>
                         </div>
@@ -189,7 +196,9 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                The frontend of the dashboard developed to host an open-access online repository of functional materials for IISc Bangalore
+                                    The frontend of the dashboard developed to
+                                    host an open-access online repository of
+                                    functional materials for IISc Bangalore
                                 </p>
                             </ProjectLinkDescription>
                         </div>
@@ -216,7 +225,10 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                The API and backend functions of the dashboard developed to host an open-access online repository of functional materials for IISc Bangalore
+                                    The API and backend functions of the
+                                    dashboard developed to host an open-access
+                                    online repository of functional materials
+                                    for IISc Bangalore
                                 </p>
                             </ProjectLinkDescription>
                         </div>
@@ -241,19 +253,17 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                    A web service and UI for providing OCR text from images hosted on MediaWiki wikis with three OCR engines
+                                    A web service and UI for providing OCR text
+                                    from images hosted on MediaWiki wikis with
+                                    three OCR engines
                                 </p>
                             </ProjectLinkDescription>
                         </div>
                         <div className="position-relative">
                             <a
                                 href="https://github.com/parthiv-m/bub2"
-                                onMouseEnter={(e) =>
-                                    handleEnter(e, 'bub2')
-                                }
-                                onMouseLeave={(e) =>
-                                    handleLeave(e, 'bub2')
-                                }
+                                onMouseEnter={(e) => handleEnter(e, 'bub2')}
+                                onMouseLeave={(e) => handleLeave(e, 'bub2')}
                             >
                                 book-uploader-bot-v2
                             </a>
@@ -268,7 +278,10 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                A book uploader bot that transfers documents from public libraries such as Google Books, Punjab Digital Library, and Trove Digital Library to Internet Archive
+                                    A book uploader bot that transfers documents
+                                    from public libraries such as Google Books,
+                                    Punjab Digital Library, and Trove Digital
+                                    Library to Internet Archive
                                 </p>
                             </ProjectLinkDescription>
                         </div>
@@ -293,7 +306,10 @@ export default function GitHubHero() {
                                     </div>
                                 </ProjectDescriptionHeader>
                                 <p className="mt-3">
-                                Wrote a Go script that automates the process of updating a Wikimedia Commons page with the remaining amount of Transkribus credits left for the Wikimedia account
+                                    Wrote a Go script that automates the process
+                                    of updating a Wikimedia Commons page with
+                                    the remaining amount of Transkribus credits
+                                    left for the Wikimedia account
                                 </p>
                             </ProjectLinkDescription>
                         </div>
