@@ -75,46 +75,31 @@ const LandingIconTray = styled.div`
     }
 `
 
-const ScrollingWordsContainer = styled.div`
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 600;
-    gap: 5px;
-`
+const SubSectionHeader = styled.div`
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
-const ScrollingWordsBox = styled.div`
-    height: 3rem;
-    border-radius: 10px;
-    overflow: hidden;
-`
+    h2 {
+        font-size: 3rem;
+        display: inline;
+        font-weight: bold;
+    }
 
-const scrollUp = keyframes`
-    15%, 25% {
-      transform: translateY(-20%);
+    &:hover h2 span {
+        background-image: linear-gradient(220deg, #ff0844 0%, #ffb199 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    40%, 50% {
-      transform: translateY(-40%);
-    }
-    65%, 75% {
-      transform: translateY(-60%);
-    }
-    90%, 100% {
-      transform: translateY(-80%);
-    }
-`
 
-const ScrollingList = styled.ul`
-    padding: 0;
-    animation: ${scrollUp} 4s infinite;
-`
-
-const ScollingListItem = styled.li`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    list-style: none;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 24px;
+        h2 {
+            font-size: 2rem;
+        }
+    }
 `
 
 export {
@@ -124,4 +109,5 @@ export {
     LandingDescription,
     LandingIconTray,
     LandingTheProton,
+    SubSectionHeader,
 }

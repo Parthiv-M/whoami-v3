@@ -5,6 +5,7 @@ import {
     LandingDescription,
     LandingIconTray,
     LandingTheProton,
+    SubSectionHeader,
 } from '../styles/landingstyles'
 import {
     SiAdobeillustrator,
@@ -47,6 +48,8 @@ import {
 import AcrossPage from '../components/AcrossPage'
 import IconWithTooltip from '../components/IconWithTooltip'
 import GitHubHero from '../components/GitHubHero'
+import FileSystemBlock from '../components/FileSystem'
+import { FileSystemHolder } from '../styles/filesystem'
 
 export default function Index(props: any) {
     return (
@@ -297,6 +300,256 @@ export default function Index(props: any) {
                 </div>
             </SkillsWrapper>
             <GitHubHero />
+            <SubSectionHeader>
+                <h2>
+                    I was very <span>active</span> in <span>college</span>{' '}
+                    clubs...
+                </h2>
+            </SubSectionHeader>
+            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'Manipal Information Security Team'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'three',
+                                content:
+                                    ' used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                    <FileSystemBlock
+                        header={"Linux Users' Group"}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'The MIT Post'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'three',
+                                content:
+                                    ' used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'three',
+                                content:
+                                    ' used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                    <FileSystemBlock
+                        header={'Entrepreneurship Cell, Manipal'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+            </div>
+            <SubSectionHeader>
+                <h2>
+                    ...and got to <span>work</span> at some <span>amazing</span>{' '}
+                    places...
+                </h2>
+            </SubSectionHeader>
+            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'Wikimedia Foundation'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'three',
+                                content:
+                                    ' used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'four',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                    <FileSystemBlock
+                        header={'Innovation Center, Manipal'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'IISc Bangalore'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'three',
+                                content:
+                                    ' used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                    <FileSystemBlock
+                        header={'Dotfood'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+            </div>
+            <SubSectionHeader>
+                <h2>
+                    ...while also spending time on <span>quality research</span>
+                    ...
+                </h2>
+            </SubSectionHeader>
+            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'MITACS Globalink Research Intern'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'three',
+                                content:
+                                    ' used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'Research Collaborator at MIT, Manipal'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+            </div>
+            <SubSectionHeader>
+                <h2>...and <span>dabbling</span> in open source!</h2>
+            </SubSectionHeader>
+            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'Mentor, Outreachy, December Cohort'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                            {
+                                fileName: 'two',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+                <FileSystemHolder>
+                    <FileSystemBlock
+                        header={'Kubernetes Community Days, Bengaluru 2023'}
+                        filesArray={[
+                            {
+                                fileName: 'one',
+                                content:
+                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                            },
+                        ]}
+                    />
+                </FileSystemHolder>
+            </div>
         </div>
     )
 }
