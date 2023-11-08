@@ -1,33 +1,19 @@
-import {
-    StarFive,
-    StarFour,
-    StarOne,
-    StarThree,
-    StarTwo,
-    Toggle,
-    ToggleHandler,
-    ToggleWrapper,
-    Toggler,
-} from '../styles/themetoggler'
+import { ThemeToggle } from '../styles/themetoggler'
 
-export function ThemeToggler(props: any) {
+export default function ThemeToggler(props: any) {
+    const handleClick = () => {
+        if (typeof props?.toggleTheme() !== 'string') {
+            props?.toggleTheme()
+        }
+    }
     return (
-        <ToggleWrapper>
-            <Toggler
-                type="checkbox"
-                checked={props?.theme === 'light' ? false : true}
-                className="dn"
-                id="dn"
-                onChange={props?.themeToggler}
-            />
-            <Toggle htmlFor="dn">
-                <ToggleHandler />
-                <StarOne />
-                <StarTwo />
-                <StarThree />
-                <StarFour />
-                <StarFive />
-            </Toggle>
-        </ToggleWrapper>
+        <ThemeToggle
+            onClick={handleClick}
+            src={
+                props?.theme === 'light'
+                    ? '/images/dark.png'
+                    : '/images/light.png'
+            }
+        />
     )
 }

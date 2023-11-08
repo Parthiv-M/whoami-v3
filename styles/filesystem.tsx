@@ -12,14 +12,25 @@ const FileSystemHolder = styled.div`
     }
 `
 
-const FileSystemWrapper = styled.div`
+const FileSystemWrapper = styled.div<{ withBackground: boolean }>`
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    background: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7' ? 'rgba(0,0,0,0.05)' : 'rgba(0,0,0,0.2)'};
+    background: ${({ theme, withBackground }) =>
+        withBackground
+            ? theme.bgColor === '#FFEBF7'
+                ? 'rgba(0,0,0,0.05)'
+                : 'rgba(0,0,0,0.2)'
+            : ''};
+
+    @media only screen and (max-width: 768px) {
+        background: ${({ theme }) =>
+            theme.bgColor === '#FFEBF7'
+                ? 'rgba(0,0,0,0.05)'
+                : 'rgba(0,0,0,0.2)'};
+    }
 `
 
 const FileSystem = styled.div`
@@ -35,6 +46,11 @@ const FileSystemHeader = styled.div`
         font-size: 2rem;
         font-weight: bold;
         color: #ff0844;
+        opacity: 0.7;
+
+        ${FileSystemWrapper}:hover & {
+            opacity: 1;
+        }
     }
 
     @media only screen and (max-width: 768px) {
@@ -59,9 +75,7 @@ const FileSystemLine = styled.div<{ cusHeight: number }>`
     width: 2px;
     margin: 1px 0;
     background: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7'
-            ? theme.colors.secondary
-            : theme.colors.primary};
+        theme.bgColor === '#FFEBF7' ? '#1A1A1A' : '#FFEBF7'};
 `
 
 const FileSystemVerticals = styled.div`
@@ -75,9 +89,7 @@ const FileSystemButton = styled.div`
     height: 7px;
     width: 7px;
     background: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7'
-            ? theme.colors.secondary
-            : theme.colors.primary};
+        theme.bgColor === '#FFEBF7' ? '#1A1A1A' : '#FFEBF7'};
 `
 
 const FileName = styled.h6`

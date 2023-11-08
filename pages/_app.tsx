@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/globalstyles'
 import { useTheme } from '../hooks/useTheme'
-import { ThemeToggler } from '../components/themeToggler'
+import FloatingNavbar from '../components/FloatingNavbar'
 
 const lightTheme: DefaultTheme = {
     colors: {
@@ -18,8 +18,8 @@ const lightTheme: DefaultTheme = {
 
 const darkTheme: DefaultTheme = {
     colors: {
-        primary: '#FFEBF7',
-        secondary: '#1A1A1A',
+        primary: '#1A1A1A',
+        secondary: '#FFEBF7',
     },
     bgColor: '#1A1A1A',
     textColors: {
@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <>
             <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
                 <GlobalStyle />
-                <ThemeToggler theme={theme} themeToggler={toggleTheme} />
+                <FloatingNavbar theme={theme} toggleTheme={toggleTheme} />
                 <Component {...pageProps} />
             </ThemeProvider>
         </>

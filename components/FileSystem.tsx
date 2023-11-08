@@ -23,7 +23,7 @@ export default function FileSystemBlock(props: any) {
         setCusHeight(heights)
     }, [])
     return (
-        <FileSystemWrapper>
+        <FileSystemWrapper withBackground={props.withBackground}>
             <FileSystemHeader>
                 <h4>{props.header}</h4>
             </FileSystemHeader>

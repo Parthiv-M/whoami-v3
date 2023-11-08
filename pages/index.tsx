@@ -50,6 +50,7 @@ import IconWithTooltip from '../components/IconWithTooltip'
 import GitHubHero from '../components/GitHubHero'
 import FileSystemBlock from '../components/FileSystem'
 import { FileSystemHolder } from '../styles/filesystem'
+import { ResumeButton, ResumeSection } from '../styles/resume'
 
 export default function Index(props: any) {
     return (
@@ -309,6 +310,7 @@ export default function Index(props: any) {
             <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
+                        withBackground
                         header={'Manipal Information Security Team'}
                         filesArray={[
                             {
@@ -346,6 +348,7 @@ export default function Index(props: any) {
                 </FileSystemHolder>
                 <FileSystemHolder>
                     <FileSystemBlock
+                        withBackground
                         header={'The MIT Post'}
                         filesArray={[
                             {
@@ -371,6 +374,7 @@ export default function Index(props: any) {
                         ]}
                     />
                     <FileSystemBlock
+                        withBackground
                         header={'Entrepreneurship Cell, Manipal'}
                         filesArray={[
                             {
@@ -421,6 +425,7 @@ export default function Index(props: any) {
                         ]}
                     />
                     <FileSystemBlock
+                        withBackground
                         header={'Innovation Center, Manipal'}
                         filesArray={[
                             {
@@ -438,6 +443,7 @@ export default function Index(props: any) {
                 </FileSystemHolder>
                 <FileSystemHolder>
                     <FileSystemBlock
+                        withBackground
                         header={'IISc Bangalore'}
                         filesArray={[
                             {
@@ -478,6 +484,7 @@ export default function Index(props: any) {
             <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
+                        withBackground
                         header={'MITACS Globalink Research Intern'}
                         filesArray={[
                             {
@@ -517,7 +524,9 @@ export default function Index(props: any) {
                 </FileSystemHolder>
             </div>
             <SubSectionHeader>
-                <h2>...and <span>dabbling</span> in open source!</h2>
+                <h2>
+                    ...and <span>dabbling</span> in open source!
+                </h2>
             </SubSectionHeader>
             <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
@@ -539,6 +548,7 @@ export default function Index(props: any) {
                 </FileSystemHolder>
                 <FileSystemHolder>
                     <FileSystemBlock
+                        withBackground
                         header={'Kubernetes Community Days, Bengaluru 2023'}
                         filesArray={[
                             {
@@ -550,6 +560,15 @@ export default function Index(props: any) {
                     />
                 </FileSystemHolder>
             </div>
+            <ResumeSection>
+                <div className="generic-container mx-auto">
+                    <h5>Great! You have scrolled this far.</h5>
+                    <h6>
+                        Find all of this and more in my <span>resume</span>.
+                    </h6>
+                    <ResumeButton>Download resume</ResumeButton>
+                </div>
+            </ResumeSection>
         </div>
     )
 }

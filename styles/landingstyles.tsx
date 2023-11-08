@@ -27,7 +27,7 @@ const LandingName = styled.h1`
     -webkit-text-fill-color: transparent;
 
     @media only screen and (max-width: 768px) {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin: 1rem 0;
     }
 `
@@ -37,6 +37,7 @@ const LandingDescription = styled.p`
 
     @media only screen and (max-width: 768px) {
         width: 100%;
+        font-size: 0.85rem;
     }
 `
 
@@ -56,6 +57,7 @@ const LandingIconTray = styled.div`
     gap: 15px;
 
     @media only screen and (max-width: 768px) {
+        margin-top: 20px;
         justify-content: center;
     }
 
