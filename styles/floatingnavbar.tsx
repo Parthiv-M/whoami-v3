@@ -87,4 +87,31 @@ const FloaterLinks = styled.div`
     }
 `
 
-export { Floater, FloaterPM, FloaterLinks }
+const FloatingSoon = styled.div`
+    position: absolute;
+    top: 20px;
+    color: ${({ theme }) =>
+        theme.bgColor === '#FFEBF7'
+            ? 'rgba(0,0,0,0.6)'
+            : 'rgba(255,255,255,0.1)'};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 500ms ease-in;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+`
+
+const FloatingDash = styled.div`
+    width: 1px;
+    border: 1px dashed
+        ${({ theme }) =>
+            theme.bgColor === '#FFEBF7'
+                ? 'rgba(0,0,0,0.4)'
+                : 'rgba(255,255,255,0.1)'};
+`
+
+export { Floater, FloaterPM, FloaterLinks, FloatingSoon, FloatingDash }
