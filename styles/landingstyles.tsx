@@ -18,6 +18,10 @@ const LandingPhoto = styled.img.attrs({
     @media only screen and (max-width: 768px) {
         width: 80%;
     }
+
+    @media only screen and (max-width: 1024px) {
+        width: 60%;
+    }
 `
 
 const LandingName = styled.h1`
@@ -30,10 +34,18 @@ const LandingName = styled.h1`
         font-size: 3.5rem;
         margin: 1rem 0;
     }
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 3rem;
+    }
 `
 
 const LandingDescription = styled.p`
     width: 60%;
+
+    @media only screen and (max-width: 1024px) {
+        width: 80%;
+    }
 
     @media only screen and (max-width: 768px) {
         width: 100%;
@@ -55,8 +67,9 @@ const LandingIconTray = styled.div`
     color: grey;
     display: flex;
     gap: 15px;
+    z-index: 100;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 767px) {
         margin-top: 20px;
         justify-content: center;
     }
@@ -100,6 +113,12 @@ const SubSectionHeader = styled.div`
         padding: 0 24px;
         h2 {
             font-size: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        h2 {
+            font-size: 2.5rem;
         }
     }
 `

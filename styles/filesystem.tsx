@@ -58,6 +58,12 @@ const FileSystemHeader = styled.div`
             font-size: 1.5rem;
         }
     }
+
+    @media only screen and (max-width: 1024px) {
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
 `
 
 const FileSystemLeft = styled.div`

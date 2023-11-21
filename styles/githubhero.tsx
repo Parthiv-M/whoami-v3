@@ -7,6 +7,11 @@ const HeroSection = styled.div`
     display: flex;
     align-items: center;
 
+    @media only screen and (max-width: 1024px) {
+        width: 90vw;
+        height: 50vh;
+    }
+
     @media only screen and (max-width: 768px) {
         width: 100vw;
         height: fit-content;
@@ -60,6 +65,10 @@ const GitHubHeader = styled.h1`
         padding-left: 10px;
         font-size: 3rem;
     }
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 4rem;
+    }
 `
 
 const GitHubSubDiv = styled.div`
@@ -83,6 +92,10 @@ const GitHubSubText = styled.h4`
         padding-left: 10px;
         font-size: 1rem;
     }
+    
+    @media only screen and (max-width: 1024px) {
+        font-size: 1.5rem;
+    }
 `
 
 const ProjectLinkArea = styled.div`{
@@ -101,6 +114,9 @@ const ProjectLinkArea = styled.div`{
         color: inherit;
         border: 1px solid ${({ theme }) =>
             theme.bgColor === '#FFEBF7' ? 'black' : 'lightgrey'};
+    }
+    @media only screen and (max-width: 768px) {
+        padding-left: 10px;
     }
 }
 `

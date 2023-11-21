@@ -45,7 +45,6 @@ import {
     SkillCascadeCard,
     SkillsWrapper,
 } from '../styles/skillsstyles'
-import AcrossPage from '../components/AcrossPage'
 import IconWithTooltip from '../components/IconWithTooltip'
 import GitHubHero from '../components/GitHubHero'
 import FileSystemBlock from '../components/FileSystem'
@@ -55,7 +54,6 @@ import { ResumeButton, ResumeSection } from '../styles/resume'
 export default function Index(props: any) {
     return (
         <div>
-            <AcrossPage />
             <LandingWrapper>
                 <div className="w-md-75 w-100 mx-auto row p-5">
                     <div className="col-md-5 text-md-end text-center">
@@ -307,7 +305,7 @@ export default function Index(props: any) {
                     clubs...
                 </h2>
             </SubSectionHeader>
-            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
                         withBackground
@@ -397,7 +395,7 @@ export default function Index(props: any) {
                     places...
                 </h2>
             </SubSectionHeader>
-            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
                         header={'Wikimedia Foundation'}
@@ -481,7 +479,7 @@ export default function Index(props: any) {
                     ...
                 </h2>
             </SubSectionHeader>
-            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
                         withBackground
@@ -528,7 +526,7 @@ export default function Index(props: any) {
                     ...and <span>dabbling</span> in open source!
                 </h2>
             </SubSectionHeader>
-            <div className="generic-container px-md-0 px-3 mx-auto d-flex flex-md-row flex-column gap-2">
+            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
                         header={'Mentor, Outreachy, December Cohort'}

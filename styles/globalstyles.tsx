@@ -186,25 +186,9 @@ const GlobalStyle = createGlobalStyle`
   .generic-container {
     width: 75%;
 
-    @media only screen and (max-width: 762px) {
+    @media only screen and (max-width: 768px) {
       width: 100%;
-    }
-  }
-
-  .across-page {
-    position: absolute;
-    top: 83%;
-    left: 0;
-    z-index: 0;
-    div {
-      height: 1px;
-      width: 100vw;
-      background: ${({ theme }) =>
-          theme.bgColor === '#FFEBF7'
-              ? 'linear-gradient(to right, #FFEBF7 0%, #c3cfe2 50%, #FFEBF7 100%)'
-              : 'linear-gradient(to right, #1A1A1A 0%, black 50%, #1A1A1A 100%)'};
-      margin-top: 1rem;
-      transform: rotate(-15deg)
+      padding: 0 1rem;
     }
   }
 `

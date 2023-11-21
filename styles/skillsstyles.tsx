@@ -5,6 +5,10 @@ const SkillsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 1024px) {
+        min-height: 50vh;
+    }
 `
 
 const SkillCascadeCard = styled.div`
