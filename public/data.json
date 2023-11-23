@@ -1,0 +1,57 @@
+{
+    "design": "Like every other (aspiring) designer, I started out with Photoshop and Illustrator. Spending countless hours working on editing a photo to trying to get the pen tool to work according to my will, I tried creating designs and illustrations of my own. Eventually, I ran into Figma—an all in one tool that lets me edit (to a slight extent) photos, create vectors, and aid design and prototyping in the UI/UX workflow. Since I first started using it, Figma has grown to include communities, plugins, templates, jamboards, and various other features—all of which I use on a regular basis. And yet, the biggest challenge for me as a designer will always remain finding that one transparent PNG asset for my design!",
+    "code": "My first tryst with programming was in 11th grade when I learnt the basics of data structures and implementation of algorithms using C++. Rushing through stacks, queues, linked lists, and a variety of searching techniques, I got introduced to mobile app development using Flutter in the first year of my college. Gradually, I shifted to web technologies, with the last few years being dominated by NodeJS and NextJS based projects. Alongside, I also worked on data cleaning/analysis and implementation of ML algortihms using Python. More recently, I have familiarised myself with coding in PHP and Go as well. Needless to say, I believe in what they say—if it works, don't touch it!",
+    "deploy": "Once I learnt how to develop my own applications, scripts, and tools that the wider web can utilise, I learnt how to make it accessible through the internet. Starting from Heroku to Netlify and Vercel, I have explored SaaS technologies to a good extent. Outside of that, even though I have used Azure and GCP—albeit, sparingly—I found myself using the AWS ecosystem for almost every small deployment. However, that still does not make me immune to pipeline crashes and failed deployments on a Friday evening!",
+    "whatelse": "",
+    "clubs": {
+        "mist": {
+            "board": "As the Web Development Head at MIST, I was responsible for managing all the web related portals and databases related to the club. I also oversaw projects being held in my domain, along with helping in the general functioning of the club.",
+            "incognito": "As a club, we organised a technical fest called Incognito which saw participation from over 7 countries. The four events conducted over a span of three days was the most successful fest condcuted in the short history of the club.",
+            "faceless": "I led the creation, deployment and management of the Faceless game portal created for the first time in Incognito 21. It was a web based portal for an OSINT based event, where we created fake identities of people over 3 months and required participants to trace out their details following a pre-determined storyline.",
+            "mancomm": "As a Management Committee member, I contributed to social media posts (both content and graphics), helped in recruiting and managing the Working Committe of the club, and worked on a couple of projects for technical fests of the college."
+        },
+        "mitpost": {
+            "fests": "During college fests, the Post was responsible for bringing out daily newsletters for which we worked through the night. This involved creating short (funny) reports, illustrations, official addresses and much more!",
+            "board": "As Head of Writing at the Post, I was responsible, along with my other board members for all the written content that we put out as a club. I proofread and fact-checked every piece that the Post published during my tenure. I also coordinated the work of various divisions of the writing department.",
+            "subed": "As a Sub-Editor, I was involved in managing junior writers, editing their reports and articles, as well as curating content for magazines and newsletters. We also helped the board with recruitments and other club activities.",
+            "writer": "I joined the official media body of MIT, Manipal, as a writer who covered events around college and wrote reports for them. I also worked on writing articles and opinion pieces about national and international events."
+        },
+        "lug": {
+            "installfest": "I was involved in conducting Install Fests in college that helped students get familiarised with Linux and get them started with open source technologies.",
+            "opensource": "As a team, we coordinated a community of open source enthusiasts and were always willing to geek out about open soruce tech, troubleshoot problems that community members had, and have fun with computers."
+        },
+        "ecell": {
+            "mes": "I built the official website of Manipal Entrepreneurship Summit 2022 held at MIT, Manipal. It served as a single place for registration for all participants, as well as a place for schedules of all events. It was used by 1500+ users over a span of 7 days.",
+            "website": "I built two versions of the official website of the Entrepreneurship Cell, making several design changes, workflow changes and data changes over the course of a year. It also had a dedicated resources section for all startup oriented content.",
+            "content": "I worked in the Content team of the E-Cell for a year, where I was responsible for bringing out startup and entrepreneurship based content for social media posts. We also wrote and edited any content required by the organisation for its various outreach purposes."
+        }
+    },
+    "work": {
+        "wmf": {
+            "fellow": "I have been associated with the Wikimedia Foundation as a Wikisource Technical Fellow since October 2022. I worked mainly on Wikimedia OCR and integrating Transkribus as a new OCR engine in the tool. I have learnt how to create and train custom models with Transkribus, and created documentation that the community can utilise for the same.",
+            "commmeet": "Ever since I started working with WMF, I have helped to organise monthly Wikisource Community Meetings. Starting August 2023, I have been conducting these meetings, along with helping to organise a triaging call for the technical contributors as well. This helps me interact with community members, assess their needs and working methodologies, as well as help to take decisions on what needs to be worked on from the Foundation's point of view.",
+            "other": "In my free time, I started exploring other tools, extensions and codebases that is utilised in the Wikimedia ecosystem. I ended up contributing to the BUB2 tool, the WSContest tool, and the Wikisource extension as well. This has greatly improved my working knowledge of PHP codebases, something that I was not familiar with earlier."
+        },
+        "iisc": {
+            "anant": "I worked on Project aNANt, the world's largest database of functional materials, under Prof. Abhishek Singh. I was part of the initial team that created the base web application to display and download functional mateiral data from the database. Eventually, I completed a six month internship with the team at IISc, where I completed the various cogs of the wheel that made up the aNANt software. This included deploying multiple codebases on an in-house Linux server, managing these deployments, and integrating newer functionality like email alerts, database downloads, and creating comprehensive documentation."
+        },
+        "ic": {
+            "dotfood": "In November 2021, I co-founded a mobile application based startup with a friend. Named Dotfood, it dealt with delivery of food from various canteens and restaurants in within college to hostels of students. Within 6 months of it's launch, it had 2500+ downloads and was actively used throughout the campus. I worked on the web based admin console where restaurants could manage orders, as well as on social media marketing. For reasons entirely noy under our control, we failed to scale up and spread to other colleges :(",
+            "kmc": "As part of the Innovation Center, I got the opportunity to work on collaborative projects with Kasturba Medical College, Manipal. Even though the projects have not yet made it to production, they served to increase my knowledge on how to design products to suit non-technical audiences. I got to work with doctors and professors who wanted a system to automate processes in an effort to minimize paperwork and improve accountability."
+        }
+    },
+    "research": {
+        "mitacs": {
+            "lakehead": "I worked on Brain Computing Interfaces and their applications in authentication under Prof. Garima Bajwa at Lakehead University, Thunder Bay. We worked on analysing the reproducibility metrics involved in BCI research. I learnt how to analyse large EEG datasets, gained knowledge about filters and data manipulation, and implemented ML algorithms and neural networks using Python.",
+            "ieee": "My research partner and I put together a paper on reproducibility techniques in BCI research to Rewords22 which is being held as part of IEEE 18th International Conference (e-Science) in Salt Lake City, Utah, USA. The paper got accepted and was presented virtually at the conference in October 2022."
+        },
+        "manipal": {
+            "first": "I worked with Prof. Prakash Aithal on analysing and collecting financial news and events and then correlating their impact on stock prices of top companies using sentiment analysis with Python, while applying mathematical and analytical algorithms along the way. This has the potential to be applied for optimising stock portfolios.",
+            "second": "Additionally, I also worked on learning more about genetic algorithms, their implementations in Python and their applications in the fin-tech world. Combined with the implementations of the previous paper, this could be potentially used to optimise stock portfolios."
+        }
+    },
+    "opensource": {
+        "outreachy": "I am an Outreachy mentor for the Wikimedia Foundation on the Book Uploader Bot v2 project. Built with NextJS, Redis and Bull, this tool facilitates community members in the process of uploading public domain books from digital libraries like Google Books, Trove, and Panjab Digital Library to the Internet Archive.",
+        "kcd": "As part of the organising team, I helped out with speaker coordination, deciding and ordering swag for the conference, and other pre-conference tasks. During the two-day event held in Bengaluru, I helped the team to manage audiences and volunteered to help out with other day-to-day tasks at the venue. This event helped me interact with people and live projects in the open source world."
+    }
+}

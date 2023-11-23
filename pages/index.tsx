@@ -50,8 +50,15 @@ import GitHubHero from '../components/GitHubHero'
 import FileSystemBlock from '../components/FileSystem'
 import { FileSystemHolder } from '../styles/filesystem'
 import { ResumeButton, ResumeSection } from '../styles/resume'
+import { useEffect, useState } from 'react'
 
 export default function Index(props: any) {
+    const [json, setjson] = useState(null);
+    useEffect(() => {
+        fetch("/data.json")
+            .then(res => res.json())
+            .then(data => setjson(data))
+    }, [])
     return (
         <div>
             <LandingWrapper>
@@ -139,16 +146,7 @@ export default function Index(props: any) {
                             </div>
                         </IconsCascade>
                         <p className="text-muted">
-                            In publishing and graphic design, Lorem ipsum
-                            (/ˌlɔː.rəm ˈɪp.səm/) is a placeholder text commonly
-                            used to demonstrate the visual form of a document or
-                            a typeface without relying on meaningful content.
-                            Lorem ipsum may be used as a placeholder before
-                            final copy is available. It is also used to
-                            temporarily replace text in a process called
-                            greeking, which allows designers to consider the
-                            form of a webpage or publication, without the
-                            meaning of the text influencing the design.
+                            {json?.design}
                         </p>
                     </SkillCascadeCard>
                     <SkillCascadeCard>
@@ -198,16 +196,7 @@ export default function Index(props: any) {
                             </div>
                         </IconsCascade>
                         <p className="text-muted">
-                            In publishing and graphic design, Lorem ipsum
-                            (/ˌlɔː.rəm ˈɪp.səm/) is a placeholder text commonly
-                            used to demonstrate the visual form of a document or
-                            a typeface without relying on meaningful content.
-                            Lorem ipsum may be used as a placeholder before
-                            final copy is available. It is also used to
-                            temporarily replace text in a process called
-                            greeking, which allows designers to consider the
-                            form of a webpage or publication, without the
-                            meaning of the text influencing the design.
+                            {json?.code}
                         </p>
                     </SkillCascadeCard>
                     <SkillCascadeCard>
@@ -237,16 +226,7 @@ export default function Index(props: any) {
                             </div>
                         </IconsCascade>
                         <p className="text-muted">
-                            In publishing and graphic design, Lorem ipsum
-                            (/ˌlɔː.rəm ˈɪp.səm/) is a placeholder text commonly
-                            used to demonstrate the visual form of a document or
-                            a typeface without relying on meaningful content.
-                            Lorem ipsum may be used as a placeholder before
-                            final copy is available. It is also used to
-                            temporarily replace text in a process called
-                            greeking, which allows designers to consider the
-                            form of a webpage or publication, without the
-                            meaning of the text influencing the design.
+                            {json?.deploy}
                         </p>
                     </SkillCascadeCard>
                     <SkillCascadeCard>
@@ -312,62 +292,67 @@ export default function Index(props: any) {
                         header={'Manipal Information Security Team'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Web Development Head',
+                                fileId: 'web-dev-head',
+                                content: json?.clubs?.mist?.board
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Organiser, Incognito 2021',
+                                fileId: 'incognito',
+                                content: json?.clubs?.mist?.incognito,
                             },
                             {
-                                fileName: 'three',
-                                content:
-                                    ' used to temporarily replace text in a process called',
+                                fileName: 'Developer and Organiser, Faceless',
+                                fileId: 'faceless',
+                                content: json?.clubs?.mist?.faceless,
+                            },
+                            {
+                                fileName: 'Management Committee member',
+                                fileId: 'mancomm',
+                                content: json?.clubs?.mist?.mancomm,
                             },
                         ]}
                     />
                     <FileSystemBlock
+                    withBackground
+                    header={'The MIT Post'}
+                    filesArray={[
+                        {
+                            fileName: 'Revels and TechTatva',
+                            fileId: 'fests',
+                            content: json?.clubs?.mitpost?.fests,
+                        },
+                        {
+                            fileName: 'Head of Writing',
+                            fileId: 'board',
+                            content: json?.clubs?.mitpost?.board,
+                        },
+                        {
+                            fileName: 'Sub-Editor, Writing Department',
+                            fileId: 'subed',
+                            content: json?.clubs?.mitpost?.subed,
+                        },
+                        {
+                            fileName: 'Writer',
+                            fileId: 'writer',
+                            content: json?.clubs?.mitpost?.writer,
+                        },
+                    ]}
+                />
+                </FileSystemHolder>
+                <FileSystemHolder>
+                <FileSystemBlock
                         header={"Linux Users' Group"}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Core Committee Member',
+                                fileId: 'core-committee',
+                                content: json?.clubs?.lug?.opensource,
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        withBackground
-                        header={'The MIT Post'}
-                        filesArray={[
-                            {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'three',
-                                content:
-                                    ' used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'three',
-                                content:
-                                    ' used to temporarily replace text in a process called',
+                                fileName: 'Install Fests',
+                                fileId: 'install-fests',
+                                content: json?.clubs?.lug?.installfest,
                             },
                         ]}
                     />
@@ -376,14 +361,19 @@ export default function Index(props: any) {
                         header={'Entrepreneurship Cell, Manipal'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Developer, Manipal Entrepreneurship Summit Website',
+                                fileId: 'mes',
+                                content: json?.clubs?.ecell?.mes,
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Developer, Entrepreneurship Cell Website',
+                                fileId: 'ecell-web',
+                                content: json?.clubs?.ecell?.website,
+                            },
+                            {
+                                fileName: 'Executive, Content Team',
+                                fileId: 'content',
+                                content: json?.clubs?.ecell?.content,
                             },
                         ]}
                     />
@@ -401,24 +391,19 @@ export default function Index(props: any) {
                         header={'Wikimedia Foundation'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Wikisource Technical Fellow',
+                                fileId: 'tech-fellow',
+                                content: json?.work?.wmf?.fellow,
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Organiser, Wikisource Community Meetings',
+                                fileId: 'comm-meet',
+                                content: json?.work?.wmf?.commmeet,
                             },
                             {
-                                fileName: 'three',
-                                content:
-                                    ' used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'four',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Tech Contributor, Wiki-related projects',
+                                fileId: 'comm-meet',
+                                content: json?.work?.wmf?.other,
                             },
                         ]}
                     />
@@ -427,14 +412,14 @@ export default function Index(props: any) {
                         header={'Innovation Center, Manipal'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Co-founder and Developer, Dotfood',
+                                fileId: 'dotfood',
+                                content: json?.work?.ic?.dotfood,
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Full stack developer',
+                                fileId: 'kmc',
+                                content: json?.work?.ic?.kmc,
                             },
                         ]}
                     />
@@ -445,29 +430,9 @@ export default function Index(props: any) {
                         header={'IISc Bangalore'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'three',
-                                content:
-                                    ' used to temporarily replace text in a process called',
-                            },
-                        ]}
-                    />
-                    <FileSystemBlock
-                        header={'Dotfood'}
-                        filesArray={[
-                            {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Full Stack Developer, Material Research Center',
+                                fileId: 'anant',
+                                content: json?.work?.iisc?.anant,
                             },
                         ]}
                     />
@@ -486,19 +451,14 @@ export default function Index(props: any) {
                         header={'MITACS Globalink Research Intern'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Researcher, Lakehead University',
+                                fileId: 'lakehead',
+                                content: json?.research?.mitacs?.lakehead,
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'three',
-                                content:
-                                    ' used to temporarily replace text in a process called',
+                                fileName: '(Virtual) Paper Presentation, Utah',
+                                fileId: 'ieeesbm',
+                                content: json?.research?.mitacs?.ieee,
                             },
                         ]}
                     />
@@ -508,14 +468,14 @@ export default function Index(props: any) {
                         header={'Research Collaborator at MIT, Manipal'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Building a Calendar of Events Database by Analyzing Financial Spikes',
+                                fileId: 'ieeesbm',
+                                content: json?.research?.manipal?.first,
                             },
                             {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
+                                fileName: 'Real-Time Portfolio Management System Utilizing Machine Learning Techniques',
+                                fileId: 'ieeesbm',
+                                content: json?.research?.manipal?.second,
                             },
                         ]}
                     />
@@ -532,15 +492,10 @@ export default function Index(props: any) {
                         header={'Mentor, Outreachy, December Cohort'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
-                            {
-                                fileName: 'two',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
+                                fileName: 'Project Co-Mentor, WMF',
+                                fileId: 'outreachy',
+                                content: json?.opensource?.outreachy
+                            }
                         ]}
                     />
                 </FileSystemHolder>
@@ -550,10 +505,10 @@ export default function Index(props: any) {
                         header={'Kubernetes Community Days, Bengaluru 2023'}
                         filesArray={[
                             {
-                                fileName: 'one',
-                                content:
-                                    'Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called',
-                            },
+                                fileName: 'Volunteer, Organising Team',
+                                fileId: 'kcd',
+                                content: json?.opensource?.kcd
+                            }
                         ]}
                     />
                 </FileSystemHolder>
