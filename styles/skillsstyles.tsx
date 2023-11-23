@@ -13,6 +13,7 @@ const SkillsWrapper = styled.div`
 
 const SkillCascadeCard = styled.div`
     p {
+        line-height: 1.3rem;
         @media only screen and (max-width: 768px) {
             margin-top: 16px;
         }

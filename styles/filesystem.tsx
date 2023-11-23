@@ -74,6 +74,16 @@ const FileSystemLeft = styled.div`
 const FileSystemRight = styled.div`
     width: 100%;
     padding: 10px;
+
+    p {
+        line-height: 1.1rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        p {
+            line-height: 1.2rem;
+        }
+    }
 `
 
 const FileSystemLine = styled.div<{ cusHeight: number }>`

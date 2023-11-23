@@ -27,7 +27,7 @@ export default function FloatingNavbar(props: any) {
         <Floater>
             <FloaterPM>P M</FloaterPM>
             <FloaterLinks>
-                <a href="">Tech</a>
+                <a href="#tech">Tech</a>
                 <a href="" style={{ pointerEvents: 'none' }}>
                     {!hideComingSoon && (
                         <FloatingSoon>

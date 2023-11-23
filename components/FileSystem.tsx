@@ -17,11 +17,11 @@ export default function FileSystemBlock(props: any) {
         let heights = []
         props.filesArray.map((index: any) => {
             heights.push(
-                document.querySelector('#' + index.fileName).clientHeight
+                document.querySelector('#' + index.fileId)?.clientHeight
             )
         })
         setCusHeight(heights)
-    }, [])
+    }, [props.filesArray])
     return (
         <FileSystemWrapper withBackground={props.withBackground}>
             <FileSystemHeader>
@@ -59,7 +59,7 @@ export default function FileSystemBlock(props: any) {
                                 >
                                     {file.fileName}
                                 </FileName>
-                                <p className="text-muted" id={file.fileName}>
+                                <p className="text-muted" id={file.fileId}>
                                     {file.content}
                                 </p>
                             </>

@@ -48,7 +48,7 @@ export default function GitHubHero() {
         }
     }
     return (
-        <HeroSection>
+        <HeroSection id="tech">
             <ContentTainer>
                 <GitHubImage />
                 <GitHubSubDiv>
