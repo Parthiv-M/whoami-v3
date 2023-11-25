@@ -92,7 +92,7 @@ const GitHubSubText = styled.h4`
         padding-left: 10px;
         font-size: 1rem;
     }
-    
+
     @media only screen and (max-width: 1024px) {
         font-size: 1.5rem;
     }

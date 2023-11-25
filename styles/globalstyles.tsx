@@ -191,6 +191,32 @@ const GlobalStyle = createGlobalStyle`
       padding: 0 1rem;
     }
   }
+
+  .holder {
+    overflow: hidden;
+    position: relative;
+    margin-top: -1.2rem;
+    width: 100%;
+    height: 30px;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .ellipse {
+    position: absolute;
+    background: radial-gradient(ellipse, transparent, transparent 7px, #ff0844 7px, #ff0844 10px, transparent 11px);
+    background-size: 26px 20px;
+    width: 100%;
+    height: 10px;
+  }
+  
+  .ellipse2 {
+    top: 10px;
+    left: 18px;
+    background-position: 0px -10px;
+  }
 `
 
 export default GlobalStyle

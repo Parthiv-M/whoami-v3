@@ -53,11 +53,11 @@ import { ResumeButton, ResumeSection } from '../styles/resume'
 import { useEffect, useState } from 'react'
 
 export default function Index(props: any) {
-    const [json, setjson] = useState(null);
+    const [json, setjson] = useState(null)
     useEffect(() => {
-        fetch("/data.json")
-            .then(res => res.json())
-            .then(data => setjson(data))
+        fetch('/data.json')
+            .then((res) => res.json())
+            .then((data) => setjson(data))
     }, [])
     return (
         <div>
@@ -125,6 +125,10 @@ export default function Index(props: any) {
                     </div>
                 </div>
             </LandingWrapper>
+            <div className="holder">
+                <div className="ellipse"></div>
+                <div className="ellipse ellipse2"></div>
+            </div>
             <SkillsWrapper>
                 <div className="generic-container mx-auto row p-md-5 p-4">
                     <SkillCascadeCard>
@@ -145,9 +149,7 @@ export default function Index(props: any) {
                                 />
                             </div>
                         </IconsCascade>
-                        <p className="text-muted">
-                            {json?.design}
-                        </p>
+                        <p className="text-muted">{json?.design}</p>
                     </SkillCascadeCard>
                     <SkillCascadeCard>
                         <IconsCascade>
@@ -195,9 +197,7 @@ export default function Index(props: any) {
                                 />
                             </div>
                         </IconsCascade>
-                        <p className="text-muted">
-                            {json?.code}
-                        </p>
+                        <p className="text-muted">{json?.code}</p>
                     </SkillCascadeCard>
                     <SkillCascadeCard>
                         <IconsCascade>
@@ -225,9 +225,7 @@ export default function Index(props: any) {
                                 />
                             </div>
                         </IconsCascade>
-                        <p className="text-muted">
-                            {json?.deploy}
-                        </p>
+                        <p className="text-muted">{json?.deploy}</p>
                     </SkillCascadeCard>
                     <SkillCascadeCard>
                         <IconsCascade>
@@ -288,13 +286,14 @@ export default function Index(props: any) {
             <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
+                        isImage={false}
                         withBackground
                         header={'Manipal Information Security Team'}
                         filesArray={[
                             {
                                 fileName: 'Web Development Head',
                                 fileId: 'web-dev-head',
-                                content: json?.clubs?.mist?.board
+                                content: json?.clubs?.mist?.board,
                             },
                             {
                                 fileName: 'Organiser, Incognito 2021',
@@ -314,34 +313,36 @@ export default function Index(props: any) {
                         ]}
                     />
                     <FileSystemBlock
-                    withBackground
-                    header={'The MIT Post'}
-                    filesArray={[
-                        {
-                            fileName: 'Revels and TechTatva',
-                            fileId: 'fests',
-                            content: json?.clubs?.mitpost?.fests,
-                        },
-                        {
-                            fileName: 'Head of Writing',
-                            fileId: 'board',
-                            content: json?.clubs?.mitpost?.board,
-                        },
-                        {
-                            fileName: 'Sub-Editor, Writing Department',
-                            fileId: 'subed',
-                            content: json?.clubs?.mitpost?.subed,
-                        },
-                        {
-                            fileName: 'Writer',
-                            fileId: 'writer',
-                            content: json?.clubs?.mitpost?.writer,
-                        },
-                    ]}
-                />
+                        isImage={false}
+                        withBackground
+                        header={'The MIT Post'}
+                        filesArray={[
+                            {
+                                fileName: 'Revels and TechTatva',
+                                fileId: 'fests',
+                                content: json?.clubs?.mitpost?.fests,
+                            },
+                            {
+                                fileName: 'Head of Writing',
+                                fileId: 'board',
+                                content: json?.clubs?.mitpost?.board,
+                            },
+                            {
+                                fileName: 'Sub-Editor, Writing Department',
+                                fileId: 'subed',
+                                content: json?.clubs?.mitpost?.subed,
+                            },
+                            {
+                                fileName: 'Writer',
+                                fileId: 'writer',
+                                content: json?.clubs?.mitpost?.writer,
+                            },
+                        ]}
+                    />
                 </FileSystemHolder>
                 <FileSystemHolder>
-                <FileSystemBlock
+                    <FileSystemBlock
+                        isImage={false}
                         header={"Linux Users' Group"}
                         filesArray={[
                             {
@@ -357,16 +358,19 @@ export default function Index(props: any) {
                         ]}
                     />
                     <FileSystemBlock
+                        isImage={false}
                         withBackground
                         header={'Entrepreneurship Cell, Manipal'}
                         filesArray={[
                             {
-                                fileName: 'Developer, Manipal Entrepreneurship Summit Website',
+                                fileName:
+                                    'Developer, Manipal Entrepreneurship Summit Website',
                                 fileId: 'mes',
                                 content: json?.clubs?.ecell?.mes,
                             },
                             {
-                                fileName: 'Developer, Entrepreneurship Cell Website',
+                                fileName:
+                                    'Developer, Entrepreneurship Cell Website',
                                 fileId: 'ecell-web',
                                 content: json?.clubs?.ecell?.website,
                             },
@@ -388,6 +392,7 @@ export default function Index(props: any) {
             <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                 <FileSystemHolder>
                     <FileSystemBlock
+                        isImage={false}
                         header={'Wikimedia Foundation'}
                         filesArray={[
                             {
@@ -396,18 +401,21 @@ export default function Index(props: any) {
                                 content: json?.work?.wmf?.fellow,
                             },
                             {
-                                fileName: 'Organiser, Wikisource Community Meetings',
+                                fileName:
+                                    'Organiser, Wikisource Community Meetings',
                                 fileId: 'comm-meet',
                                 content: json?.work?.wmf?.commmeet,
                             },
                             {
-                                fileName: 'Tech Contributor, Wiki-related projects',
-                                fileId: 'comm-meet',
+                                fileName:
+                                    'Tech Contributor, Wiki-related projects',
+                                fileId: 'wiki-tech',
                                 content: json?.work?.wmf?.other,
                             },
                         ]}
                     />
                     <FileSystemBlock
+                        isImage={false}
                         withBackground
                         header={'Innovation Center, Manipal'}
                         filesArray={[
@@ -426,15 +434,22 @@ export default function Index(props: any) {
                 </FileSystemHolder>
                 <FileSystemHolder>
                     <FileSystemBlock
+                        isImage={false}
                         withBackground
                         header={'IISc Bangalore'}
                         filesArray={[
                             {
-                                fileName: 'Full Stack Developer, Material Research Center',
+                                fileName:
+                                    'Full Stack Developer, Material Research Center',
                                 fileId: 'anant',
                                 content: json?.work?.iisc?.anant,
                             },
                         ]}
+                    />
+                    <FileSystemBlock
+                        isImage={true}
+                        imageUrl={'/images/work.svg'}
+                        filesArray={[]}
                     />
                 </FileSystemHolder>
             </div>
@@ -468,13 +483,15 @@ export default function Index(props: any) {
                         header={'Research Collaborator at MIT, Manipal'}
                         filesArray={[
                             {
-                                fileName: 'Building a Calendar of Events Database by Analyzing Financial Spikes',
-                                fileId: 'ieeesbm',
+                                fileName:
+                                    'Building a Calendar of Events Database by Analyzing Financial Spikes',
+                                fileId: 'calendar',
                                 content: json?.research?.manipal?.first,
                             },
                             {
-                                fileName: 'Real-Time Portfolio Management System Utilizing Machine Learning Techniques',
-                                fileId: 'ieeesbm',
+                                fileName:
+                                    'Real-Time Portfolio Management System Utilizing Machine Learning Techniques',
+                                fileId: 'portfolio',
                                 content: json?.research?.manipal?.second,
                             },
                         ]}
@@ -494,8 +511,8 @@ export default function Index(props: any) {
                             {
                                 fileName: 'Project Co-Mentor, WMF',
                                 fileId: 'outreachy',
-                                content: json?.opensource?.outreachy
-                            }
+                                content: json?.opensource?.outreachy,
+                            },
                         ]}
                     />
                 </FileSystemHolder>
@@ -507,8 +524,8 @@ export default function Index(props: any) {
                             {
                                 fileName: 'Volunteer, Organising Team',
                                 fileId: 'kcd',
-                                content: json?.opensource?.kcd
-                            }
+                                content: json?.opensource?.kcd,
+                            },
                         ]}
                     />
                 </FileSystemHolder>
