@@ -45,7 +45,9 @@ const Floater = styled.nav`
     }
 `
 
-const FloaterPM = styled.h1`
+const FloaterPM = styled.a.attrs({
+    href: "/"
+})`
     font-weight: bold;
     margin-left: 5px;
     background-image: linear-gradient(220deg, #ff0844 0%, #ffb199 100%);

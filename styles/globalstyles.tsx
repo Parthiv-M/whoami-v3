@@ -217,6 +217,19 @@ const GlobalStyle = createGlobalStyle`
     left: 18px;
     background-position: 0px -10px;
   }
+
+  // to remove later
+
+  .loaded.art-cards {
+      opacity: 1;
+  }
+
+  .moving.swipey-card {
+    transition: none;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+  }
 `
 
 export default GlobalStyle

@@ -51,6 +51,7 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap"
                         rel="stylesheet"
                     />
+                    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
                 </Head>
                 <body>
                     <Main />

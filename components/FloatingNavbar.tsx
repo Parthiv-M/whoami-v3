@@ -37,13 +37,7 @@ export default function FloatingNavbar(props: any) {
                     )}
                     Writing
                 </a>
-                <a href="" style={{ pointerEvents: 'none' }}>
-                    {!hideComingSoon && (
-                        <FloatingSoon style={{ translate: '-30%' }}>
-                            <FloatingDash style={{ height: '40px' }} />
-                            Working on it!
-                        </FloatingSoon>
-                    )}
+                <a href="/art">
                     Art
                 </a>
                 <ThemeToggler {...props} />
