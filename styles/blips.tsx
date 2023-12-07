@@ -68,7 +68,10 @@ const Blip = styled.p.attrs({
 `
 
 const BlipRandom = styled.img.attrs(({ theme }) => ({
-    src: theme.bgColor === '#1A1A1A' ? "/images/randomWhite.png" : "/images/randomBlack.png"
+    src:
+        theme.bgColor === '#1A1A1A'
+            ? '/images/randomWhite.png'
+            : '/images/randomBlack.png',
 }))`
     transition: all 500ms ease-in;
 

@@ -37,9 +37,7 @@ export default function FloatingNavbar(props: any) {
                     )}
                     Writing
                 </a>
-                <a href="/art">
-                    Art
-                </a>
+                <a href="/art">Art</a>
                 <ThemeToggler {...props} />
             </FloaterLinks>
         </Floater>

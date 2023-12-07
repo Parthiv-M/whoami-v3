@@ -46,7 +46,7 @@ const Floater = styled.nav`
 `
 
 const FloaterPM = styled.a.attrs({
-    href: "/"
+    href: '/',
 })`
     font-weight: bold;
     margin-left: 5px;

@@ -49,9 +49,7 @@ export default function Blips() {
                                 className="d-flex align-items-center gap-1"
                                 onClick={handleRandomize}
                             >
-                                <BlipRandom
-                                    height={15}
-                                />
+                                <BlipRandom height={15} />
                                 Randomize
                             </div>
                             <p

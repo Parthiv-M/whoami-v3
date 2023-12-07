@@ -10,7 +10,7 @@ const ArtWrapper = styled.div`
 
 const Overlay = styled.div`
     background: ${({ theme }) =>
-    theme.bgColor === '#FFEBF7'
+        theme.bgColor === '#FFEBF7'
             ? 'rgba(255,255,255,0.3)'
             : 'rgba(0,0,0,0.8)'};
     height: 100%;
@@ -30,7 +30,7 @@ const ArtMetaDataWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    h2 { 
+    h2 {
         font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 5px;
@@ -46,7 +46,7 @@ const ArtMetaDataWrapper = styled.div`
     img {
         margin-left: auto;
         filter: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7' ? 'invert(100%)' : 'invert(0%)'};
+            theme.bgColor === '#FFEBF7' ? 'invert(100%)' : 'invert(0%)'};
     }
 
     @media only screen and (max-width: 768px) {
@@ -71,7 +71,7 @@ const ArtCard = styled.div.attrs({
 `
 
 const SwiperArea = styled.div.attrs({
-    className: "swipey-cards"
+    className: 'swipey-cards',
 })`
     width: 100%;
     flex-grow: 1;
@@ -88,12 +88,12 @@ const SwiperArea = styled.div.attrs({
 `
 
 const SwiperCard = styled.div.attrs({
-    className: "swipey-card"
+    className: 'swipey-card',
 })`
     display: inline-block;
     max-width: 100%;
     background: ${({ theme }) =>
-    theme.bgColor === '#FFEBF7'
+        theme.bgColor === '#FFEBF7'
             ? 'rgba(255,255,255,1)'
             : 'rgba(0,0,0,0.8)'};
     border-radius: 8px;
@@ -109,7 +109,7 @@ const SwiperCard = styled.div.attrs({
     img {
         max-width: 550px;
         pointer-events: none;
-        
+
         @media only screen and (max-width: 768px) {
             max-width: 350px;
         }
@@ -120,7 +120,7 @@ const ByLine = styled.p`
     background: white;
     color: black;
     padding-top: 10px;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
     font-size: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -129,7 +129,7 @@ const ByLine = styled.p`
 const RefreshCard = styled.div`
     height: 300px;
     width: 65%;
-    background: ${({theme}) => theme.bgColor};
+    background: ${({ theme }) => theme.bgColor};
     border-radius: 1rem;
     div {
         width: 80%;
@@ -151,7 +151,7 @@ const RefreshButton = styled.div`
     margin-top: 1rem;
     cursor: pointer;
     border-bottom: 1px solid #ff0844;
-    width: 38%!important;
+    width: 38% !important;
     padding-bottom: 5px;
     pointer-events: auto;
 
@@ -173,4 +173,14 @@ const RefreshButton = styled.div`
     }
 `
 
-export { ArtWrapper, Overlay, ArtMetaDataWrapper, ArtCard, SwiperArea, SwiperCard, RefreshCard, RefreshButton, ByLine }
+export {
+    ArtWrapper,
+    Overlay,
+    ArtMetaDataWrapper,
+    ArtCard,
+    SwiperArea,
+    SwiperCard,
+    RefreshCard,
+    RefreshButton,
+    ByLine,
+}

@@ -1,10 +1,21 @@
 import { useEffect } from 'react'
-import { ArtCard, ArtMetaDataWrapper, ArtWrapper, ByLine, Overlay, RefreshButton, RefreshCard, SwiperArea, SwiperCard } from '../styles/art'
+import {
+    ArtCard,
+    ArtMetaDataWrapper,
+    ArtWrapper,
+    ByLine,
+    Overlay,
+    RefreshButton,
+    RefreshCard,
+    SwiperArea,
+    SwiperCard,
+} from '../styles/art'
 
 export default function ArtPage() {
+    const supabaseBucketBase =
+        process.env.NEXT_PUBLIC_SUPABASE_URL +
+        '/storage/v1/object/public/theprotonart/'
 
-    const supabaseBucketBase = process.env.NEXT_PUBLIC_SUPABASE_URL + "/storage/v1/object/public/theprotonart/"
-    
     const initCards = () => {
         var artCards = document.querySelector<HTMLElement>('.art-cards')
         var allCards = document.querySelectorAll<HTMLElement>('.swipey-card')
@@ -22,15 +33,15 @@ export default function ArtPage() {
             card.style.opacity = ((10 - index) / 10).toString()
         })
 
-        artCards?.classList.add('loaded')  
+        artCards?.classList.add('loaded')
     }
 
     const seeAgain = () => {
         var allCards = document.querySelectorAll<HTMLElement>('.swipey-card')
         allCards?.forEach((element: HTMLElement) => {
-            element?.classList.remove("removed");
-            initCards();
-        });
+            element?.classList.remove('removed')
+            initCards()
+        })
     }
 
     useEffect(() => {
@@ -104,27 +115,30 @@ export default function ArtPage() {
             <Overlay>
                 <ArtMetaDataWrapper>
                     <h2>Artworks</h2>
-                    <p>I engross myself in sketching, painting, or even doodling out characters, places, people, or objects. It has been a hobby of mine ever since I remember.</p>
-                    <img height={80} width={100} src="/images/theProtonVector.png"/>
+                    <p>
+                        I engross myself in sketching, painting, or even
+                        doodling out characters, places, people, or objects. It
+                        has been a hobby of mine ever since I remember.
+                    </p>
+                    <img
+                        height={80}
+                        width={100}
+                        src="/images/theProtonVector.png"
+                    />
                 </ArtMetaDataWrapper>
                 <ArtCard>
                     <SwiperArea>
                         {[
-                            supabaseBucketBase + "afghan.png",
-                            supabaseBucketBase + "dancer.png",
-                            supabaseBucketBase + "dobby.png",
-                            supabaseBucketBase + "harry.png",
-                            supabaseBucketBase + "telephone.png",
-                            supabaseBucketBase + "tiger_colour.png",
+                            supabaseBucketBase + 'afghan.png',
+                            supabaseBucketBase + 'dancer.png',
+                            supabaseBucketBase + 'dobby.png',
+                            supabaseBucketBase + 'harry.png',
+                            supabaseBucketBase + 'telephone.png',
+                            supabaseBucketBase + 'tiger_colour.png',
                         ].map((artwork: string) => {
                             return (
                                 <SwiperCard>
-                                    <img
-                                        alt='Artwork'
-                                        src={
-                                            artwork
-                                        }
-                                    />
+                                    <img alt="Artwork" src={artwork} />
                                     <ByLine>- Parthiv Menon -</ByLine>
                                 </SwiperCard>
                             )
@@ -134,8 +148,8 @@ export default function ArtPage() {
                                 <div className="go-see-again">
                                     <p>
                                         {' '}
-                                        While I work on newer sketches, why don't you go
-                                        see the older ones again?
+                                        While I work on newer sketches, why
+                                        don't you go see the older ones again?
                                     </p>
                                 </div>
                                 <RefreshButton onClick={seeAgain}>
