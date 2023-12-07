@@ -135,9 +135,9 @@ export default function ArtPage() {
                             supabaseBucketBase + 'harry.png',
                             supabaseBucketBase + 'telephone.png',
                             supabaseBucketBase + 'tiger_colour.png',
-                        ].map((artwork: string) => {
+                        ].map((artwork: string, index: number) => {
                             return (
-                                <SwiperCard>
+                                <SwiperCard key={index}>
                                     <img alt="Artwork" src={artwork} />
                                     <ByLine>- Parthiv Menon -</ByLine>
                                 </SwiperCard>
@@ -149,7 +149,7 @@ export default function ArtPage() {
                                     <p>
                                         {' '}
                                         While I work on newer sketches, why
-                                        don't you go see the older ones again?
+                                        don&apos;t you go see the older ones again?
                                     </p>
                                 </div>
                                 <RefreshButton onClick={seeAgain}>
