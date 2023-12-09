@@ -48,9 +48,10 @@ import {
 import IconWithTooltip from '../components/IconWithTooltip'
 import GitHubHero from '../components/GitHubHero'
 import FileSystemBlock from '../components/FileSystem'
-import { FileSystemHolder } from '../styles/filesystem'
+import { FileSystemHolder, Sticker } from '../styles/filesystem'
 import { ResumeButton, ResumeSection } from '../styles/resume'
 import { useEffect, useState } from 'react'
+import StickerHeader from '../components/Sticker'
 
 export default function Index(props: any) {
     const [json, setjson] = useState(null)
@@ -59,9 +60,23 @@ export default function Index(props: any) {
             .then((res) => res.json())
             .then((data) => setjson(data))
     }, [])
+
+    const [blur, setBlur] = useState<number>(0)
+    useEffect(() => {
+        const handleScroll = () => {
+            setBlur(Math.floor(window.scrollY / 7))
+        }
+        window.addEventListener('scroll', handleScroll)
+    }, [])
+
     return (
         <div>
-            <LandingWrapper>
+            <LandingWrapper
+                style={{
+                    filter: `blur(${blur}px)`,
+                    transform: `scale(${blur > 0 ? 1.01 : 1})`,
+                }}
+            >
                 <div className="w-md-75 w-100 mx-auto row p-5">
                     <div className="col-md-5 text-md-end text-center">
                         <LandingPhoto />
@@ -125,10 +140,7 @@ export default function Index(props: any) {
                     </div>
                 </div>
             </LandingWrapper>
-            <div className="holder">
-                <div className="ellipse"></div>
-                <div className="ellipse ellipse2"></div>
-            </div>
+            <div style={{ height: '100vh', width: '100vw' }}></div>
             <SkillsWrapper>
                 <div className="generic-container mx-auto row p-md-5 p-4">
                     <SkillCascadeCard>
@@ -277,258 +289,271 @@ export default function Index(props: any) {
                 </div>
             </SkillsWrapper>
             <GitHubHero />
-            <SubSectionHeader>
-                <h2>
-                    I was very <span>active</span> in <span>college</span>{' '}
-                    clubs...
-                </h2>
-            </SubSectionHeader>
-            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        isImage={false}
-                        withBackground
-                        header={'Manipal Information Security Team'}
-                        filesArray={[
-                            {
-                                fileName: 'Web Development Head',
-                                fileId: 'web-dev-head',
-                                content: json?.clubs?.mist?.board,
-                            },
-                            {
-                                fileName: 'Organiser, Incognito 2021',
-                                fileId: 'incognito',
-                                content: json?.clubs?.mist?.incognito,
-                            },
-                            {
-                                fileName: 'Developer and Organiser, Faceless',
-                                fileId: 'faceless',
-                                content: json?.clubs?.mist?.faceless,
-                            },
-                            {
-                                fileName: 'Management Committee member',
-                                fileId: 'mancomm',
-                                content: json?.clubs?.mist?.mancomm,
-                            },
-                        ]}
-                    />
-                    <FileSystemBlock
-                        isImage={false}
-                        withBackground
-                        header={'The MIT Post'}
-                        filesArray={[
-                            {
-                                fileName: 'Revels and TechTatva',
-                                fileId: 'fests',
-                                content: json?.clubs?.mitpost?.fests,
-                            },
-                            {
-                                fileName: 'Head of Writing',
-                                fileId: 'board',
-                                content: json?.clubs?.mitpost?.board,
-                            },
-                            {
-                                fileName: 'Sub-Editor, Writing Department',
-                                fileId: 'subed',
-                                content: json?.clubs?.mitpost?.subed,
-                            },
-                            {
-                                fileName: 'Writer',
-                                fileId: 'writer',
-                                content: json?.clubs?.mitpost?.writer,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        isImage={false}
-                        header={"Linux Users' Group"}
-                        filesArray={[
-                            {
-                                fileName: 'Core Committee Member',
-                                fileId: 'core-committee',
-                                content: json?.clubs?.lug?.opensource,
-                            },
-                            {
-                                fileName: 'Install Fests',
-                                fileId: 'install-fests',
-                                content: json?.clubs?.lug?.installfest,
-                            },
-                        ]}
-                    />
-                    <FileSystemBlock
-                        isImage={false}
-                        withBackground
-                        header={'Entrepreneurship Cell, Manipal'}
-                        filesArray={[
-                            {
-                                fileName:
-                                    'Developer, Manipal Entrepreneurship Summit Website',
-                                fileId: 'mes',
-                                content: json?.clubs?.ecell?.mes,
-                            },
-                            {
-                                fileName:
-                                    'Developer, Entrepreneurship Cell Website',
-                                fileId: 'ecell-web',
-                                content: json?.clubs?.ecell?.website,
-                            },
-                            {
-                                fileName: 'Executive, Content Team',
-                                fileId: 'content',
-                                content: json?.clubs?.ecell?.content,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-            </div>
-            <SubSectionHeader>
-                <h2>
-                    ...and got to <span>work</span> at some <span>amazing</span>{' '}
-                    places...
-                </h2>
-            </SubSectionHeader>
-            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        isImage={false}
-                        header={'Wikimedia Foundation'}
-                        filesArray={[
-                            {
-                                fileName: 'Wikisource Technical Fellow',
-                                fileId: 'tech-fellow',
-                                content: json?.work?.wmf?.fellow,
-                            },
-                            {
-                                fileName:
-                                    'Organiser, Wikisource Community Meetings',
-                                fileId: 'comm-meet',
-                                content: json?.work?.wmf?.commmeet,
-                            },
-                            {
-                                fileName:
-                                    'Tech Contributor, Wiki-related projects',
-                                fileId: 'wiki-tech',
-                                content: json?.work?.wmf?.other,
-                            },
-                        ]}
-                    />
-                    <FileSystemBlock
-                        isImage={false}
-                        withBackground
-                        header={'Innovation Center, Manipal'}
-                        filesArray={[
-                            {
-                                fileName: 'Co-founder and Developer, Dotfood',
-                                fileId: 'dotfood',
-                                content: json?.work?.ic?.dotfood,
-                            },
-                            {
-                                fileName: 'Full stack developer',
-                                fileId: 'kmc',
-                                content: json?.work?.ic?.kmc,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        isImage={false}
-                        withBackground
-                        header={'IISc Bangalore'}
-                        filesArray={[
-                            {
-                                fileName:
-                                    'Full Stack Developer, Material Research Center',
-                                fileId: 'anant',
-                                content: json?.work?.iisc?.anant,
-                            },
-                        ]}
-                    />
-                    <FileSystemBlock
-                        isImage={true}
-                        imageUrl={'/images/work.svg'}
-                        filesArray={[]}
-                    />
-                </FileSystemHolder>
-            </div>
-            <SubSectionHeader>
-                <h2>
-                    ...while also spending time on <span>quality research</span>
-                    ...
-                </h2>
-            </SubSectionHeader>
-            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        withBackground
-                        header={'MITACS Globalink Research Intern'}
-                        filesArray={[
-                            {
-                                fileName: 'Researcher, Lakehead University',
-                                fileId: 'lakehead',
-                                content: json?.research?.mitacs?.lakehead,
-                            },
-                            {
-                                fileName: '(Virtual) Paper Presentation, Utah',
-                                fileId: 'ieeesbm',
-                                content: json?.research?.mitacs?.ieee,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        header={'Research Collaborator at MIT, Manipal'}
-                        filesArray={[
-                            {
-                                fileName:
-                                    'Building a Calendar of Events Database by Analyzing Financial Spikes',
-                                fileId: 'calendar',
-                                content: json?.research?.manipal?.first,
-                            },
-                            {
-                                fileName:
-                                    'Real-Time Portfolio Management System Utilizing Machine Learning Techniques',
-                                fileId: 'portfolio',
-                                content: json?.research?.manipal?.second,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-            </div>
-            <SubSectionHeader>
-                <h2>
-                    ...and <span>dabbling</span> in open source!
-                </h2>
-            </SubSectionHeader>
-            <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        header={'Mentor, Outreachy, December Cohort'}
-                        filesArray={[
-                            {
-                                fileName: 'Project Co-Mentor, WMF',
-                                fileId: 'outreachy',
-                                content: json?.opensource?.outreachy,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
-                <FileSystemHolder>
-                    <FileSystemBlock
-                        withBackground
-                        header={'Kubernetes Community Days, Bengaluru 2023'}
-                        filesArray={[
-                            {
-                                fileName: 'Volunteer, Organising Team',
-                                fileId: 'kcd',
-                                content: json?.opensource?.kcd,
-                            },
-                        ]}
-                    />
-                </FileSystemHolder>
+            <div>
+                <StickerHeader id="clubs">
+                    <SubSectionHeader>
+                        <h2>
+                            I was very <span>active</span> in{' '}
+                            <span>college</span> clubs...
+                        </h2>
+                    </SubSectionHeader>
+                </StickerHeader>
+                <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            isImage={false}
+                            withBackground
+                            header={'Manipal Information Security Team'}
+                            filesArray={[
+                                {
+                                    fileName: 'Web Development Head',
+                                    fileId: 'web-dev-head',
+                                    content: json?.clubs?.mist?.board,
+                                },
+                                {
+                                    fileName: 'Organiser, Incognito 2021',
+                                    fileId: 'incognito',
+                                    content: json?.clubs?.mist?.incognito,
+                                },
+                                {
+                                    fileName:
+                                        'Developer and Organiser, Faceless',
+                                    fileId: 'faceless',
+                                    content: json?.clubs?.mist?.faceless,
+                                },
+                                {
+                                    fileName: 'Management Committee member',
+                                    fileId: 'mancomm',
+                                    content: json?.clubs?.mist?.mancomm,
+                                },
+                            ]}
+                        />
+                        <FileSystemBlock
+                            isImage={false}
+                            withBackground
+                            header={'The MIT Post'}
+                            filesArray={[
+                                {
+                                    fileName: 'Revels and TechTatva',
+                                    fileId: 'fests',
+                                    content: json?.clubs?.mitpost?.fests,
+                                },
+                                {
+                                    fileName: 'Head of Writing',
+                                    fileId: 'board',
+                                    content: json?.clubs?.mitpost?.board,
+                                },
+                                {
+                                    fileName: 'Sub-Editor, Writing Department',
+                                    fileId: 'subed',
+                                    content: json?.clubs?.mitpost?.subed,
+                                },
+                                {
+                                    fileName: 'Writer',
+                                    fileId: 'writer',
+                                    content: json?.clubs?.mitpost?.writer,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            isImage={false}
+                            header={"Linux Users' Group"}
+                            filesArray={[
+                                {
+                                    fileName: 'Core Committee Member',
+                                    fileId: 'core-committee',
+                                    content: json?.clubs?.lug?.opensource,
+                                },
+                                {
+                                    fileName: 'Install Fests',
+                                    fileId: 'install-fests',
+                                    content: json?.clubs?.lug?.installfest,
+                                },
+                            ]}
+                        />
+                        <FileSystemBlock
+                            isImage={false}
+                            withBackground
+                            header={'Entrepreneurship Cell, Manipal'}
+                            filesArray={[
+                                {
+                                    fileName:
+                                        'Developer, Manipal Entrepreneurship Summit Website',
+                                    fileId: 'mes',
+                                    content: json?.clubs?.ecell?.mes,
+                                },
+                                {
+                                    fileName:
+                                        'Developer, Entrepreneurship Cell Website',
+                                    fileId: 'ecell-web',
+                                    content: json?.clubs?.ecell?.website,
+                                },
+                                {
+                                    fileName: 'Executive, Content Team',
+                                    fileId: 'content',
+                                    content: json?.clubs?.ecell?.content,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                </div>
+                <StickerHeader id="work">
+                    <SubSectionHeader>
+                        <h2>
+                            ...and got to <span>work</span> at some{' '}
+                            <span>amazing</span> places...
+                        </h2>
+                    </SubSectionHeader>
+                </StickerHeader>
+                <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            isImage={false}
+                            header={'Wikimedia Foundation'}
+                            filesArray={[
+                                {
+                                    fileName: 'Wikisource Technical Fellow',
+                                    fileId: 'tech-fellow',
+                                    content: json?.work?.wmf?.fellow,
+                                },
+                                {
+                                    fileName:
+                                        'Organiser, Wikisource Community Meetings',
+                                    fileId: 'comm-meet',
+                                    content: json?.work?.wmf?.commmeet,
+                                },
+                                {
+                                    fileName:
+                                        'Tech Contributor, Wiki-related projects',
+                                    fileId: 'wiki-tech',
+                                    content: json?.work?.wmf?.other,
+                                },
+                            ]}
+                        />
+                        <FileSystemBlock
+                            isImage={false}
+                            withBackground
+                            header={'Innovation Center, Manipal'}
+                            filesArray={[
+                                {
+                                    fileName:
+                                        'Co-founder and Developer, Dotfood',
+                                    fileId: 'dotfood',
+                                    content: json?.work?.ic?.dotfood,
+                                },
+                                {
+                                    fileName: 'Full stack developer',
+                                    fileId: 'kmc',
+                                    content: json?.work?.ic?.kmc,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            isImage={false}
+                            withBackground
+                            header={'IISc Bangalore'}
+                            filesArray={[
+                                {
+                                    fileName:
+                                        'Full Stack Developer, Material Research Center',
+                                    fileId: 'anant',
+                                    content: json?.work?.iisc?.anant,
+                                },
+                            ]}
+                        />
+                        <FileSystemBlock
+                            isImage={true}
+                            imageUrl={'/images/work.svg'}
+                            filesArray={[]}
+                        />
+                    </FileSystemHolder>
+                </div>
+                <StickerHeader id="research">
+                    <SubSectionHeader>
+                        <h2>
+                            ...while also spending time on <span>research</span>
+                            ...
+                        </h2>
+                    </SubSectionHeader>
+                </StickerHeader>
+                <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            withBackground
+                            header={'MITACS Globalink Research Intern'}
+                            filesArray={[
+                                {
+                                    fileName: 'Researcher, Lakehead University',
+                                    fileId: 'lakehead',
+                                    content: json?.research?.mitacs?.lakehead,
+                                },
+                                {
+                                    fileName:
+                                        '(Virtual) Paper Presentation, Utah',
+                                    fileId: 'ieeesbm',
+                                    content: json?.research?.mitacs?.ieee,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            header={'Research Collaborator at MIT, Manipal'}
+                            filesArray={[
+                                {
+                                    fileName:
+                                        'Building a Calendar of Events Database by Analyzing Financial Spikes',
+                                    fileId: 'calendar',
+                                    content: json?.research?.manipal?.first,
+                                },
+                                {
+                                    fileName:
+                                        'Real-Time Portfolio Management System Utilizing Machine Learning Techniques',
+                                    fileId: 'portfolio',
+                                    content: json?.research?.manipal?.second,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                </div>
+                <StickerHeader id="opensource">
+                    <SubSectionHeader>
+                        <h2>
+                            ...and <span>dabbling</span> in open source!
+                        </h2>
+                    </SubSectionHeader>
+                </StickerHeader>
+                <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            header={'Mentor, Outreachy, December Cohort'}
+                            filesArray={[
+                                {
+                                    fileName: 'Project Co-Mentor, WMF',
+                                    fileId: 'outreachy',
+                                    content: json?.opensource?.outreachy,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                    <FileSystemHolder>
+                        <FileSystemBlock
+                            withBackground
+                            header={'Kubernetes Community Days, Bengaluru 2023'}
+                            filesArray={[
+                                {
+                                    fileName: 'Volunteer, Organising Team',
+                                    fileId: 'kcd',
+                                    content: json?.opensource?.kcd,
+                                },
+                            ]}
+                        />
+                    </FileSystemHolder>
+                </div>
             </div>
             <ResumeSection>
                 <div className="generic-container mx-auto">
@@ -539,6 +564,7 @@ export default function Index(props: any) {
                     <ResumeButton>Download resume</ResumeButton>
                 </div>
             </ResumeSection>
+            <div style={{ height: '100vh', width: '100vw' }}></div>
         </div>
     )
 }

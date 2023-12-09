@@ -1,5 +1,18 @@
 import styled from 'styled-components'
 
+const Sticker = styled.div`
+    height: fit-content;
+    position: relative;
+    z-index: 10;
+    padding: 5px 0;
+
+    @media only screen and (max-width: 768px) {
+        height: fit-content;
+        position: sticky;
+        top: -1px;
+    }
+`
+
 const FileSystemHolder = styled.div`
     width: 50%;
     display: flex;
@@ -117,6 +130,7 @@ const FileName = styled.h6`
 `
 
 export {
+    Sticker,
     FileSystemHolder,
     FileSystemWrapper,
     FileSystem,
