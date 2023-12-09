@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const ResumeSection = styled.div`
+    position: relative;
+    z-index: 10;
     margin-top: 2rem;
     height: 25vh;
     background: ${({ theme }) => theme.colors.secondary};
@@ -47,7 +49,7 @@ const ResumeSection = styled.div`
 `
 
 const ResumeButton = styled.a.attrs({
-    href: '',
+    href: '#',
 })`
     padding: 10px;
     margin-top: 10px;

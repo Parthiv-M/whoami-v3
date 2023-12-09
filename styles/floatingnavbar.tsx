@@ -10,7 +10,7 @@ const Floater = styled.nav`
     position: fixed;
     top: 10px;
     border-radius: 24px;
-    z-index: 10;
+    z-index: 100;
     translate: 50%;
     display: flex;
     align-items: center;

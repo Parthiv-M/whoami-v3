@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const HeroSection = styled.div`
+    position: relative;
+    z-index: 10;
     width: 75vw;
     height: 100vh;
     margin: 0 auto;

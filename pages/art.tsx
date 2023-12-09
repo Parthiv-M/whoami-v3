@@ -149,7 +149,8 @@ export default function ArtPage() {
                                     <p>
                                         {' '}
                                         While I work on newer sketches, why
-                                        don&apos;t you go see the older ones again?
+                                        don&apos;t you go see the older ones
+                                        again?
                                     </p>
                                 </div>
                                 <RefreshButton onClick={seeAgain}>

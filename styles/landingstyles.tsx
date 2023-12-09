@@ -5,6 +5,9 @@ const LandingWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    transition: all 1ms ease-in;
+    z-index: 0;
 `
 
 const LandingPhoto = styled.img.attrs({
