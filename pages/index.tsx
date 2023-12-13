@@ -278,9 +278,7 @@ export default function Index(props: any) {
                                 />
                             </div>
                         </IconsCascade>
-                        <p className="text-muted">
-                        {json?.whatelse}
-                        </p>
+                        <p className="text-muted">{json?.whatelse}</p>
                     </SkillCascadeCard>
                 </div>
             </SkillsWrapper>
@@ -557,7 +555,7 @@ export default function Index(props: any) {
                     <h6>
                         Find all of this and more in my <span>resume</span>.
                     </h6>
-                    <ResumeButton target='_blank'>Download resume</ResumeButton>
+                    <ResumeButton target="_blank">Download resume</ResumeButton>
                 </div>
             </ResumeSection>
         </div>
