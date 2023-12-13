@@ -49,7 +49,7 @@ const ResumeSection = styled.div`
 `
 
 const ResumeButton = styled.a.attrs({
-    href: '#',
+    href: '/resume.pdf',
 })`
     padding: 10px;
     margin-top: 10px;

@@ -91,6 +91,8 @@ const SwiperCard = styled.div.attrs({
     className: 'swipey-card',
 })`
     display: inline-block;
+    min-width: 500px;
+    min-height: 500px;
     max-width: 100%;
     background: ${({ theme }) =>
         theme.bgColor === '#FFEBF7'

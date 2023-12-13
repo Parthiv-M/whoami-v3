@@ -27,8 +27,8 @@ export default function FloatingNavbar(props: any) {
         <Floater>
             <FloaterPM>P M</FloaterPM>
             <FloaterLinks>
-                <a href="#tech">Tech</a>
-                <a href="" style={{ pointerEvents: 'none' }}>
+                <a href="../#tech">Tech</a>
+                {/* <a href="" style={{ pointerEvents: 'none' }}>
                     {!hideComingSoon && (
                         <FloatingSoon>
                             <FloatingDash style={{ height: '80px' }} />
@@ -36,7 +36,7 @@ export default function FloatingNavbar(props: any) {
                         </FloatingSoon>
                     )}
                     Writing
-                </a>
+                </a> */}
                 <a href="/art">Art</a>
                 <ThemeToggler {...props} />
             </FloaterLinks>
