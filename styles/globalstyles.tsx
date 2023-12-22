@@ -206,15 +206,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .is-pinned {
-    @media only screen and (max-width: 768px) {
-      backdrop-filter: blur(1rem);
-      h2 {
-        transition: all 100ms ease-in;
-        font-size: 1rem;
-        font-weight: light;
-        letter-spacing: 1px;
-      }
-    }
+    backdrop-filter: blur(1rem);
+  }
 }
 `
 

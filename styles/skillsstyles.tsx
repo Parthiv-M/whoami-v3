@@ -5,6 +5,8 @@ const SkillsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; 
+    z-index: 10;
 
     @media only screen and (max-width: 1024px) {
         min-height: 50vh;
