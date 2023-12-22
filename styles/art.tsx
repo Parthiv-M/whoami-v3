@@ -116,6 +116,11 @@ const SwiperCard = styled.div.attrs({
             max-width: 350px;
         }
     }
+
+    @media only screen and (max-width: 768px) {
+        min-width: auto;
+        min-height: auto;
+    }
 `
 
 const ByLine = styled.p`

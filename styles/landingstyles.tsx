@@ -114,22 +114,6 @@ const SubSectionHeader = styled.div`
     @media only screen and (max-width: 768px) {
         width: 100%;
         padding: 0 24px;
-
-        .is-pinned {
-              backdrop-filter: blur(1rem);
-              h2 {
-                transition: all 100ms ease-in;
-                font-size: 1rem;
-                font-weight: light;
-                letter-spacing: 1px;
-              }
-        }
-    }
-
-    @media only screen and (max-width: 1024px) {
-        h2 {
-            font-size: 2.5rem;
-        }
     }
 `
 
