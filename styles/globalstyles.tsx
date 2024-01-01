@@ -207,6 +207,9 @@ const GlobalStyle = createGlobalStyle`
 
   .is-pinned {
     backdrop-filter: blur(1rem);
+    h2 {
+      font-size: 1rem;
+    }
   }
 }
 `
