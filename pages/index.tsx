@@ -53,6 +53,15 @@ import { FileSystemHolder, Sticker } from '../styles/filesystem'
 import { ResumeButton, ResumeSection } from '../styles/resume'
 import { useEffect, useState } from 'react'
 import StickerHeader from '../components/Sticker'
+import {
+    MoreCard,
+    MoreCardHeader,
+    MoreCards,
+    MoreSection,
+    MoreCardArrow,
+} from '../styles/moresection'
+import { OrgCard, OrgCardArrow, OrgCards, OrgsSection } from '../styles/orgs'
+import Footer from '../components/Footer'
 
 export default function Index(props: any) {
     const [json, setjson] = useState(null)
@@ -558,6 +567,107 @@ export default function Index(props: any) {
                     <ResumeButton target="_blank">Download resume</ResumeButton>
                 </div>
             </ResumeSection>
+            <MoreSection className="pt-md-5 py-3">
+                <h2>There's more...</h2>
+                <MoreCards>
+                    <MoreCard onClick={() => (location.href = '/blips')}>
+                        <p>
+                            Byte sized blips from around the world—from wherever
+                            I might be.
+                        </p>
+                        <MoreCardHeader>
+                            <p>blips</p>
+                            <MoreCardArrow />
+                        </MoreCardHeader>
+                    </MoreCard>
+                    <MoreCard onClick={() => (location.href = '/writing')}>
+                        <p>
+                            Pieces of writing from a repository of prose, poems,
+                            or stories—written by yours truly.
+                        </p>
+                        <MoreCardHeader>
+                            <p>writing</p>
+                            <MoreCardArrow />
+                        </MoreCardHeader>
+                    </MoreCard>
+                    <MoreCard onClick={() => (location.href = '/art')}>
+                        <p>
+                            The best sketches and paintings that I have done
+                            over the past few years.
+                        </p>
+                        <MoreCardHeader>
+                            <p>art</p>
+                            <MoreCardArrow />
+                        </MoreCardHeader>
+                    </MoreCard>
+                </MoreCards>
+            </MoreSection>
+            <OrgsSection>
+                <h5>...about organisations</h5>
+                <h5>I have worked with</h5>
+                <OrgCards>
+                    <OrgCard
+                        onClick={() =>
+                            window.open('https://wikimedia.org', '_blank')
+                        }
+                    >
+                        <p>Wikimedia Foundation</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                    <OrgCard
+                        onClick={() =>
+                            window.open('https://iisc.ac.in', '_blank')
+                        }
+                    >
+                        <p>Indian Institute of Science, Bangalore</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                    <OrgCard
+                        onClick={() =>
+                            window.open('https://lakeheadu.ca', '_blank')
+                        }
+                    >
+                        <p>Lakehead University, Thunder Bay</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                    <OrgCard
+                        onClick={() =>
+                            window.open(
+                                'https://www.manipal.edu/mit/mit-experience/innovation-center.html',
+                                '_blank'
+                            )
+                        }
+                    >
+                        <p>Innovation Center, MAHE</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                    <OrgCard
+                        onClick={() =>
+                            window.open('https://themitpost.com', '_blank')
+                        }
+                    >
+                        <p>The MIT Post</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                    <OrgCard
+                        onClick={() =>
+                            window.open('https://wearemist.in', '_blank')
+                        }
+                    >
+                        <p>Manipal Information Security Team</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                    <OrgCard
+                        onClick={() =>
+                            window.open('https://ecellmit.com', '_blank')
+                        }
+                    >
+                        <p>Entrepreneurship Cell, Manipal</p>
+                        <OrgCardArrow />
+                    </OrgCard>
+                </OrgCards>
+            </OrgsSection>
+            <Footer />
         </div>
     )
 }

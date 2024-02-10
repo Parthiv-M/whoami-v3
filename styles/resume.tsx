@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 const ResumeSection = styled.div`
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 15px;
     position: relative;
     z-index: 10;
     margin-top: 2rem;
@@ -32,9 +35,11 @@ const ResumeSection = styled.div`
     }
 
     @media only screen and (max-width: 768px) {
+        width: 90%;
         min-height: 50vh;
         max-height: fit-content;
         padding: 1rem 2rem;
+        margin-top: 1rem;
 
         h5 {
             font-size: 2rem;
