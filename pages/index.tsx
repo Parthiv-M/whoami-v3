@@ -567,7 +567,7 @@ export default function Index(props: any) {
                     <ResumeButton target="_blank">Download resume</ResumeButton>
                 </div>
             </ResumeSection>
-            <MoreSection className="pt-md-5 py-3">
+            <MoreSection className='pt-md-5 py-3'>
                 <h2>There's more...</h2>
                 <MoreCards>
                     <MoreCard onClick={() => (location.href = '/blips')}>
