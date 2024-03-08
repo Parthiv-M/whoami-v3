@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const WritingWrapper = styled.div`
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     @media only screen and (max-width: 768px) {
         width: 90%;
         line-height: 1.2rem;
@@ -21,6 +21,4 @@ const WritingWrapper = styled.div`
     }
 `
 
-export {
-    WritingWrapper
-}
+export { WritingWrapper }
