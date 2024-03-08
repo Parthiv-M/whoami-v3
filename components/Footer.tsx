@@ -1,36 +1,77 @@
-import { FooterBottom, FooterBranding, FooterLink, FooterLinks, FooterLinkColumn, FooterColumnHead} from "../styles/footer";
+import {
+    FooterBottom,
+    FooterBranding,
+    FooterLink,
+    FooterLinks,
+    FooterLinkColumn,
+    FooterColumnHead,
+} from '../styles/footer'
 
 export default function Footer() {
     return (
         <FooterBottom>
             <FooterBranding>parthiv menon.</FooterBranding>
-            <p>This website has been fully designed and developed by Parthiv Menon. All images, if any, are created and owned by me.</p>
+            <p>
+                This website has been fully designed and developed by Parthiv
+                Menon. All images, if any, are created and owned by me.
+            </p>
             <FooterLinks>
                 <FooterLinkColumn>
                     <FooterColumnHead>find me on</FooterColumnHead>
-                    <FooterLink href="/blips">github</FooterLink>
-                    <FooterLink href="/blips">linkedin</FooterLink>
-                    <FooterLink href="/blips">instagram</FooterLink>
-                    <FooterLink href="/blips">mastodon</FooterLink>
+                    <FooterLink
+                        href="https://github.com/parthiv-m"
+                        target="_blank"
+                    >
+                        github
+                    </FooterLink>
+                    <FooterLink
+                        href="https://linkedin.com/in/parthivmenon"
+                        target="_blank"
+                    >
+                        linkedin
+                    </FooterLink>
+                    <FooterLink
+                        href="https://instagram.com/_.parthiv_"
+                        target="_blank"
+                    >
+                        instagram
+                    </FooterLink>
+                    <FooterLink
+                        href="https://mastodon.social/@theproton"
+                        target="_blank"
+                    >
+                        mastodon
+                    </FooterLink>
                 </FooterLinkColumn>
                 <FooterLinkColumn>
                     <FooterColumnHead>explore my</FooterColumnHead>
-                    <FooterLink href="/blips">projects</FooterLink>
-                    <FooterLink href="/blips">research</FooterLink>
-                    <FooterLink href="/blips">work experience</FooterLink>
-                    <FooterLink href="/blips">open source experience</FooterLink>
+                    <FooterLink href="#tech">tech projects</FooterLink>
+                    <FooterLink href="#research">research</FooterLink>
+                    <FooterLink href="#work">work experience</FooterLink>
+                    <FooterLink href="#opensource">
+                        open source experience
+                    </FooterLink>
                 </FooterLinkColumn>
                 <FooterLinkColumn>
                     <FooterColumnHead>say hello</FooterColumnHead>
-                    <FooterLink href="/blips">gmail</FooterLink>
-                    <FooterLink href="/blips">protonmail</FooterLink>
+                    <FooterLink href="mailto:parthivmenon.dev@gmail.com">
+                        gmail
+                    </FooterLink>
+                    <FooterLink href="mailto:parthivmenon@proton.me">
+                        protonmail
+                    </FooterLink>
                 </FooterLinkColumn>
                 <FooterLinkColumn>
                     <FooterColumnHead>go through my</FooterColumnHead>
-                    <FooterLink href="/blips">stories</FooterLink>
-                    <FooterLink href="/blips">poems</FooterLink>
-                    <FooterLink href="/blips">other writing</FooterLink>
-                    <FooterLink href="/blips">artwork</FooterLink>
+                    <FooterLink href="/writing?type=stories">
+                        stories
+                    </FooterLink>
+                    <FooterLink href="/writing?type=poems">poems</FooterLink>
+                    <FooterLink href="/writing?type=other">
+                        other writing
+                    </FooterLink>
+                    <FooterLink href="/art">artwork</FooterLink>
+                    <FooterLink href="/blips">blips</FooterLink>
                 </FooterLinkColumn>
             </FooterLinks>
         </FooterBottom>

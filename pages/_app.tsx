@@ -3,6 +3,7 @@ import { DefaultTheme, ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/globalstyles'
 import { useTheme } from '../hooks/useTheme'
 import FloatingNavbar from '../components/FloatingNavbar'
+import Footer from '../components/Footer'
 
 const lightTheme: DefaultTheme = {
     colors: {
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <GlobalStyle />
                 <FloatingNavbar theme={theme} toggleTheme={toggleTheme} />
                 <Component {...pageProps} />
+                <Footer />
             </ThemeProvider>
         </>
     )

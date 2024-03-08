@@ -61,7 +61,6 @@ import {
     MoreCardArrow,
 } from '../styles/moresection'
 import { OrgCard, OrgCardArrow, OrgCards, OrgsSection } from '../styles/orgs'
-import Footer from '../components/Footer'
 
 export default function Index(props: any) {
     const [json, setjson] = useState(null)
@@ -667,7 +666,6 @@ export default function Index(props: any) {
                     </OrgCard>
                 </OrgCards>
             </OrgsSection>
-            <Footer />
         </div>
     )
 }
