@@ -45,10 +45,10 @@ export default function Footer() {
                 </FooterLinkColumn>
                 <FooterLinkColumn>
                     <FooterColumnHead>explore my</FooterColumnHead>
-                    <FooterLink href="#tech">tech projects</FooterLink>
-                    <FooterLink href="#research">research</FooterLink>
-                    <FooterLink href="#work">work experience</FooterLink>
-                    <FooterLink href="#opensource">
+                    <FooterLink href="../#tech">tech projects</FooterLink>
+                    <FooterLink href="../#research">research</FooterLink>
+                    <FooterLink href="../#work">work experience</FooterLink>
+                    <FooterLink href="../#opensource">
                         open source experience
                     </FooterLink>
                 </FooterLinkColumn>

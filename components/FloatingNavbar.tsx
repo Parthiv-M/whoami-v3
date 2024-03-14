@@ -7,6 +7,7 @@ import {
     FloatingSoon,
 } from '../styles/floatingnavbar'
 import ThemeToggler from './ThemeToggler'
+import Link from 'next/link'
 
 export default function FloatingNavbar(props: any) {
     const [hideComingSoon, setHideComingSoon] = useState<boolean>(false)
@@ -37,7 +38,9 @@ export default function FloatingNavbar(props: any) {
                     )}
                     Writing
                 </a> */}
-                <a href="/art">Art</a>
+                <Link href="/blips">Blip</Link>
+                <Link href="/writing">Write</Link>
+                <Link href="/art">Art</Link>
                 <ThemeToggler {...props} />
             </FloaterLinks>
         </Floater>

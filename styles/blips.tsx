@@ -8,7 +8,39 @@ const BlipsPage = styled.div`
     align-items: center;
 `
 
+const BlipBackground = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 30rem;
+        color: #ff0844;
+        opacity: 0.03;
+        filter: blur(7px);
+        font-weight: 800;
+        letter-spacing: 2rem;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 5rem;
+            opacity: 0.2;
+            filter: blur(5px);
+            letter-spacing: 0;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        height: 50%;
+        align-items: center;
+    }
+`
+
 const BlipArea = styled.div`
+    position: relative;
+    z-index: 10;
     padding: 1rem;
     width: 500px;
     min-height: 400px;
@@ -31,6 +63,7 @@ const BlipCardWrapper = styled.div`
     padding: 2rem;
     border: 1px solid transparent;
     transition: all 0.3s ease-in;
+    backdrop-filter: blur(10px);
 
     &:hover {
         border: 1px solid
@@ -82,6 +115,7 @@ const BlipRandom = styled.img.attrs(({ theme }) => ({
 
 export {
     BlipsPage,
+    BlipBackground,
     BlipArea,
     BlipCardWrapper,
     BlipOptions,

@@ -1,8 +1,9 @@
-import { WritingWrapper } from '../styles/writing'
+import { WIPBanner, WritingWrapper } from '../styles/writing'
 
 export default function Writing() {
     return (
         <WritingWrapper>
+            <WIPBanner>Work In Progress</WIPBanner>
             <p>
                 While I build this page, check out what I wrote at{' '}
                 <a

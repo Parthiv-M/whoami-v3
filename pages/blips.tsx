@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
 import supabase from '../utils/supabase'
-import { BlipArea, BlipOptions, BlipRandom, BlipsPage } from '../styles/blips'
+import {
+    BlipArea,
+    BlipBackground,
+    BlipOptions,
+    BlipRandom,
+    BlipsPage,
+} from '../styles/blips'
 import BlipCard from '../components/BlipCard'
 
 export default function Blips() {
@@ -37,6 +43,11 @@ export default function Blips() {
 
     return (
         <BlipsPage>
+            <BlipBackground>
+                <h1>
+                    blips<span>...</span>
+                </h1>
+            </BlipBackground>
             <BlipArea>
                 {chosenBlip && (
                     <>

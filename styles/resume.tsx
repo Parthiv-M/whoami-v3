@@ -54,7 +54,7 @@ const ResumeSection = styled.div`
 `
 
 const ResumeButton = styled.a.attrs({
-    href: '/resume.pdf',
+    href: 'https://ttnzhnolifzqurcbephl.supabase.co/storage/v1/object/public/misc/resume.pdf',
 })`
     padding: 10px;
     margin-top: 10px;
