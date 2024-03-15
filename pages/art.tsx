@@ -10,6 +10,7 @@ import {
     SwiperArea,
     SwiperCard,
 } from '../styles/art'
+import Head from 'next/head'
 
 export default function ArtPage() {
     const supabaseBucketBase =
@@ -112,6 +113,9 @@ export default function ArtPage() {
 
     return (
         <ArtWrapper>
+            <Head>
+                <title>Artwork | Parthiv Menon</title>
+            </Head>
             <Overlay>
                 <ArtMetaDataWrapper>
                     <h2>Artworks</h2>

@@ -61,6 +61,7 @@ import {
     MoreCardArrow,
 } from '../styles/moresection'
 import { OrgCard, OrgCardArrow, OrgCards, OrgsSection } from '../styles/orgs'
+import Head from 'next/head'
 
 export default function Index(props: any) {
     const [json, setjson] = useState(null)
@@ -80,6 +81,9 @@ export default function Index(props: any) {
 
     return (
         <div>
+            <Head>
+                <title>Parthiv Menon | theproton</title>
+            </Head>
             <LandingWrapper
                 style={{
                     filter: `blur(${blur}px)`,

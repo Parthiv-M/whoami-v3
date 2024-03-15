@@ -8,6 +8,7 @@ import {
     BlipsPage,
 } from '../styles/blips'
 import BlipCard from '../components/BlipCard'
+import Head from 'next/head'
 
 export default function Blips() {
     const [blips, setBlips] = useState(null)
@@ -43,6 +44,9 @@ export default function Blips() {
 
     return (
         <BlipsPage>
+            <Head>
+                <title>Blips | Parthiv Menon</title>
+            </Head>
             <BlipBackground>
                 <h1>
                     blips<span>...</span>
