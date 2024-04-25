@@ -51,14 +51,32 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap"
                         rel="stylesheet"
                     />
-                    <script  async src="https://hammerjs.github.io/dist/hammer.js"></script>
-                    <meta name="description" content={"A place to get to know me more."} />
-                    <meta name="keywords" content={"parthiv, menon, parthiv menon, portfolio, website"} />
-                    <link rel=" icon" type="image/svg+xml" href="/favicon.svg" />
+                    <script
+                        async
+                        src="https://hammerjs.github.io/dist/hammer.js"
+                    ></script>
+                    <meta
+                        name="description"
+                        content={'A place to get to know me more.'}
+                    />
+                    <meta
+                        name="keywords"
+                        content={
+                            'parthiv, menon, parthiv menon, portfolio, website'
+                        }
+                    />
+                    <link
+                        rel=" icon"
+                        type="image/svg+xml"
+                        href="/favicon.svg"
+                    />
                     <link rel="canonical" href="https://parthivmenon.com" />
                     <meta name="reply-to" content="parthivmenon01@gmail.com" />
                     <meta property="og:title" content="Parthiv Menon" />
-                    <meta property="og:description" content={"A place to get to know me more."} />
+                    <meta
+                        property="og:description"
+                        content={'A place to get to know me more.'}
+                    />
                     <meta property="og:site_name" content="Parthiv Menon" />
                 </Head>
                 <body>

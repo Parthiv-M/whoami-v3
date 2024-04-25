@@ -7,11 +7,12 @@ const ResumeSection = styled.div`
     position: relative;
     z-index: 10;
     margin-top: 2rem;
-    height: 25vh;
+    padding: 3rem 5rem;
     background: ${({ theme }) => theme.colors.secondary};
     color: ${({ theme }) => theme.colors.primary};
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 10px;
 
     h5 {
@@ -21,7 +22,6 @@ const ResumeSection = styled.div`
 
     h6 {
         font-size: 2rem;
-        margin-bottom: 20px;
         span {
             background-image: linear-gradient(
                 220deg,
@@ -59,6 +59,7 @@ const ResumeButton = styled.a.attrs({
     padding: 10px;
     margin-top: 10px;
     border: 1px solid grey;
+    width: fit-content;
     border-radius: 2px;
 
     &:hover {

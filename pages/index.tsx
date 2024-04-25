@@ -562,13 +562,11 @@ export default function Index(props: any) {
                 </div>
             </div>
             <ResumeSection>
-                <div className="generic-container mx-auto">
-                    <h5>Great! You have scrolled this far.</h5>
-                    <h6>
-                        Find all of this and more in my <span>resume</span>.
-                    </h6>
-                    <ResumeButton target="_blank">Download resume</ResumeButton>
-                </div>
+                <h5>Great! You have scrolled this far.</h5>
+                <h6>
+                    Find all of this and more in my <span>resume</span>.
+                </h6>
+                <ResumeButton target="_blank">Download resume</ResumeButton>
             </ResumeSection>
             <MoreSection className="pt-md-5 py-3">
                 <h2>There&apos;s more...</h2>
