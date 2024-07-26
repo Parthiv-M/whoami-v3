@@ -71,25 +71,12 @@ export default function Index(props: any) {
             .then((data) => setjson(data))
     }, [])
 
-    const [blur, setBlur] = useState<number>(0)
-    useEffect(() => {
-        const handleScroll = () => {
-            setBlur(Math.floor(window.scrollY / 7))
-        }
-        window.addEventListener('scroll', handleScroll)
-    }, [])
-
     return (
         <div>
             <Head>
                 <title>Parthiv Menon | theproton</title>
             </Head>
-            <LandingWrapper
-                style={{
-                    filter: `blur(${blur}px)`,
-                    transform: `scale(${blur > 0 ? 1.01 : 1})`,
-                }}
-            >
+            <LandingWrapper style={{}}>
                 <div className="w-md-75 w-100 mx-auto row p-5">
                     <div className="col-md-5 text-md-end text-center">
                         <LandingPhoto />
@@ -153,7 +140,6 @@ export default function Index(props: any) {
                     </div>
                 </div>
             </LandingWrapper>
-            <div style={{ height: '100vh', width: '100vw' }}></div>
             <SkillsWrapper>
                 <div className="generic-container mx-auto row p-md-5 p-4">
                     <SkillCascadeCard>

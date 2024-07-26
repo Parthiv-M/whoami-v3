@@ -5,7 +5,7 @@ const LandingWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    // position: fixed;
     transition: all 1ms ease-in;
     z-index: 0;
 `
