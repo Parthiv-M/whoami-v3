@@ -50,6 +50,34 @@ const FileSystem = styled.div`
     justify-content: center;
 `
 
+const FileSystemLocation = styled.div`
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    align-self: start;
+    margin: 0 10px;
+    gap: 5px;
+    padding: 5px 10px;
+    border: 1px solid
+        ${({ theme }) =>
+            theme.bgColor === '#FFEBF7'
+                ? 'rgba(0,0,0,0.3)'
+                : 'rgba(255,255,255,0.5)'};
+    border-radius: 30px;
+    font-size: small;
+`
+
+const LocationDot = styled.span`
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: ${({ theme }) =>
+        theme.bgColor === '#FFEBF7'
+            ? 'rgba(0,0,0,0.3)'
+            : 'rgba(255,255,255,0.5)'};
+`
+
 const FileSystemHeader = styled.div`
     width: 100%;
     padding: 0 10px;
@@ -133,6 +161,8 @@ export {
     FileSystemHolder,
     FileSystemWrapper,
     FileSystem,
+    FileSystemLocation,
+    LocationDot,
     FileSystemHeader,
     FileSystemLeft,
     FileSystemRight,

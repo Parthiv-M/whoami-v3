@@ -296,6 +296,7 @@ export default function Index(props: any) {
                             isImage={false}
                             withBackground
                             header={'Manipal Information Security Team'}
+                            location={json?.clubs?.mist?.location}
                             filesArray={[
                                 {
                                     fileName: 'Web Development Head',
@@ -324,6 +325,7 @@ export default function Index(props: any) {
                             isImage={false}
                             withBackground
                             header={'The MIT Post'}
+                            location={json?.clubs?.mitpost?.location}
                             filesArray={[
                                 {
                                     fileName: 'Revels and TechTatva',
@@ -352,6 +354,7 @@ export default function Index(props: any) {
                         <FileSystemBlock
                             isImage={false}
                             header={"Linux Users' Group"}
+                            location={json?.clubs?.lug?.location}
                             filesArray={[
                                 {
                                     fileName: 'Core Committee Member',
@@ -369,6 +372,7 @@ export default function Index(props: any) {
                             isImage={false}
                             withBackground
                             header={'Entrepreneurship Cell, Manipal'}
+                            location={json?.clubs?.ecell?.location}
                             filesArray={[
                                 {
                                     fileName:
@@ -404,6 +408,7 @@ export default function Index(props: any) {
                         <FileSystemBlock
                             isImage={false}
                             header={'Wikimedia Foundation'}
+                            location={json?.work?.wmf?.location}
                             filesArray={[
                                 {
                                     fileName: 'Wikisource Technical Fellow',
@@ -428,6 +433,7 @@ export default function Index(props: any) {
                             isImage={false}
                             withBackground
                             header={'Innovation Center, Manipal'}
+                            location={json?.work?.ic?.location}
                             filesArray={[
                                 {
                                     fileName:
@@ -448,6 +454,7 @@ export default function Index(props: any) {
                             isImage={false}
                             withBackground
                             header={'IISc Bangalore'}
+                            location={json?.work?.iisc?.location}
                             filesArray={[
                                 {
                                     fileName:
@@ -477,6 +484,7 @@ export default function Index(props: any) {
                         <FileSystemBlock
                             withBackground
                             header={'MITACS Globalink Research Intern'}
+                            location={json?.research?.mitacs?.location}
                             filesArray={[
                                 {
                                     fileName: 'Researcher, Lakehead University',
@@ -495,6 +503,7 @@ export default function Index(props: any) {
                     <FileSystemHolder>
                         <FileSystemBlock
                             header={'Research Collaborator at MIT, Manipal'}
+                            location={json?.research?.manipal?.location}
                             filesArray={[
                                 {
                                     fileName:
@@ -523,11 +532,12 @@ export default function Index(props: any) {
                     <FileSystemHolder>
                         <FileSystemBlock
                             header={'Mentor, Outreachy, December Cohort'}
+                            location={json?.opensource?.outreachy?.location}
                             filesArray={[
                                 {
                                     fileName: 'Project Co-Mentor, WMF',
                                     fileId: 'outreachy',
-                                    content: json?.opensource?.outreachy,
+                                    content: json?.opensource?.outreachy?.work,
                                 },
                             ]}
                         />
@@ -536,11 +546,12 @@ export default function Index(props: any) {
                         <FileSystemBlock
                             withBackground
                             header={'Kubernetes Community Days, Bengaluru 2023'}
+                            location={json?.opensource?.kcd?.location}
                             filesArray={[
                                 {
                                     fileName: 'Volunteer, Organising Team',
                                     fileId: 'kcd',
-                                    content: json?.opensource?.kcd,
+                                    content: json?.opensource?.kcd?.work,
                                 },
                             ]}
                         />

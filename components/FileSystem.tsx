@@ -9,6 +9,8 @@ import {
     FileSystemButton,
     FileSystemHeader,
     FileName,
+    FileSystemLocation,
+    LocationDot,
 } from '../styles/filesystem'
 import React from 'react'
 
@@ -34,6 +36,10 @@ export default function FileSystemBlock(props: any) {
                 </div>
             ) : (
                 <React.Fragment>
+                    <FileSystemLocation>
+                        <LocationDot />
+                        <p>{props?.location}</p>
+                    </FileSystemLocation>
                     <FileSystemHeader>
                         <h4>{props.header}</h4>
                     </FileSystemHeader>
