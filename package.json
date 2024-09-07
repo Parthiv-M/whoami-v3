@@ -11,10 +11,13 @@
     "dependencies": {
         "@icons-pack/react-simple-icons": "^9.0.1",
         "@supabase/supabase-js": "^2.38.5",
+        "gray-matter": "^4.0.3",
         "hammerjs": "^2.0.8",
         "next": "latest",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1",
         "styled-components": "^5.3.5"
     },
     "devDependencies": {
