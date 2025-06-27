@@ -65,7 +65,7 @@
             "fromTo": "May 2022 to August 2022",
             "positionForMinimal": "Globalink Research Intern",
             "otherPositions": false,
-            "location": "Lakehead University, Thunder Bay",
+            "location": "Lakehead University",
             "lakehead": "I worked on Brain Computing Interfaces and their applications in authentication under Prof. Garima Bajwa at Lakehead University, Thunder Bay. We worked on analysing the reproducibility metrics involved in BCI research. I learnt how to analyse large EEG datasets, gained knowledge about filters and data manipulation, and implemented ML algorithms and neural networks using Python.",
             "ieee": "My research partner and I put together a paper on reproducibility techniques in BCI research to Rewords22 which is being held as part of IEEE 18th International Conference (e-Science) in Salt Lake City, Utah, USA. The paper got accepted and was presented virtually at the conference in October 2022."
         },
