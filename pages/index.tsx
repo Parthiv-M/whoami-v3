@@ -280,14 +280,14 @@ export default function Index(props: any) {
                 </div>
             </SkillsWrapper>
             <GitHubHero />
-            <div className={props?.verbose ? 'verbose': 'minimal'}>
+            <div className={props?.verbose ? 'verbose' : 'minimal'}>
                 {props?.verbose && (
-                        <SubSectionHeader>
-                            <h2>
-                                I was very <span>active</span> in{' '}
-                                <span>college</span> clubs...
-                            </h2>
-                        </SubSectionHeader>
+                    <SubSectionHeader>
+                        <h2>
+                            I was very <span>active</span> in{' '}
+                            <span>college</span> clubs...
+                        </h2>
+                    </SubSectionHeader>
                 )}
                 <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                     <FileSystemHolder>
@@ -411,12 +411,12 @@ export default function Index(props: any) {
                     </FileSystemHolder>
                 </div>
                 {props?.verbose && (
-                        <SubSectionHeader>
-                            <h2>
-                                ...and got to <span>work</span> at some{' '}
-                                <span>amazing</span> places...
-                            </h2>
-                        </SubSectionHeader>
+                    <SubSectionHeader>
+                        <h2>
+                            ...and got to <span>work</span> at some{' '}
+                            <span>amazing</span> places...
+                        </h2>
+                    </SubSectionHeader>
                 )}
                 <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                     <FileSystemHolder>

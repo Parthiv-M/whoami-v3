@@ -42,6 +42,7 @@ const FileSystemLocation = styled.div<{ verbose: boolean }>`
     display: flex;
     align-items: center;
     align-self: start;
+    flex-wrap: wrap;
     margin: 0 10px;
     gap: 5px;
     padding: ${({ verbose }) => (verbose ? '5px 10px' : '0')};

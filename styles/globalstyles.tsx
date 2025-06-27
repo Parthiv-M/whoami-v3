@@ -202,10 +202,17 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 1rem;
     background: rgba(0,0,0,0.05);
     padding: 3rem 0rem;
+
+    @media only screen and (max-width: 768px) {
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
   }
 
   .minimal {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,6 +220,10 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 1rem;
     background: rgba(0,0,0,0.05);
     transition: background 2000ms ease-in;
+
+    @media only screen and (max-width: 768px) {
+      margin: 1.2rem;
+    }
   }
 
   // to remove later
