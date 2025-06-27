@@ -1,17 +1,5 @@
 import styled from 'styled-components'
 
-const Sticker = styled.div`
-    height: fit-content;
-    position: relative;
-    z-index: 10;
-    padding: 5px 0;
-
-    @media only screen and (max-width: 768px) {
-        height: fit-content;
-        top: -1px;
-    }
-`
-
 const FileSystemHolder = styled.div`
     width: 50%;
     display: flex;
@@ -28,7 +16,6 @@ const FileSystemWrapper = styled.div<{ withBackground: boolean }>`
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     border-radius: 1rem;
     background: ${({ theme, withBackground }) =>
         withBackground
@@ -50,19 +37,21 @@ const FileSystem = styled.div`
     justify-content: center;
 `
 
-const FileSystemLocation = styled.div`
+const FileSystemLocation = styled.div<{ verbose: boolean }>`
     width: fit-content;
     display: flex;
     align-items: center;
     align-self: start;
     margin: 0 10px;
     gap: 5px;
-    padding: 5px 10px;
-    border: 1px solid
-        ${({ theme }) =>
-            theme.bgColor === '#FFEBF7'
-                ? 'rgba(0,0,0,0.3)'
-                : 'rgba(255,255,255,0.5)'};
+    padding: ${({ verbose }) => (verbose ? '5px 10px' : '0')};
+    border: ${({ verbose, theme }) =>
+        verbose
+            ? '1px solid ' +
+              (theme.bgColor === '#FFEBF7'
+                  ? 'rgba(0,0,0,0.3)'
+                  : 'rgba(255,255,255,0.5)')
+            : 'none'};
     border-radius: 30px;
     font-size: small;
 `
@@ -103,6 +92,15 @@ const FileSystemHeader = styled.div`
         h4 {
             font-size: 1.5rem;
         }
+    }
+`
+
+const FileSystemPosition = styled.p`
+    margin-left: 10px;
+    font-size: large;
+
+    span {
+        opacity: 0.4;
     }
 `
 
@@ -157,13 +155,13 @@ const FileName = styled.h6`
 `
 
 export {
-    Sticker,
     FileSystemHolder,
     FileSystemWrapper,
     FileSystem,
     FileSystemLocation,
     LocationDot,
     FileSystemHeader,
+    FileSystemPosition,
     FileSystemLeft,
     FileSystemRight,
     FileSystemLine,

@@ -11,6 +11,7 @@ import {
     FileName,
     FileSystemLocation,
     LocationDot,
+    FileSystemPosition,
 } from '../styles/filesystem'
 import React from 'react'
 
@@ -26,23 +27,24 @@ export default function FileSystemBlock(props: any) {
         setCusHeight(heights)
     }, [props.filesArray])
     return (
-        <FileSystemWrapper withBackground={props.withBackground}>
-            {props?.isImage ? (
-                <div
-                    style={{ height: '500px' }}
-                    className="d-md-flex d-none w-100 d-flex justify-content-center align-items-center"
-                >
-                    <img src={props?.imageUrl} style={{ width: '60%' }} />
-                </div>
-            ) : (
-                <React.Fragment>
-                    <FileSystemLocation>
-                        <LocationDot />
-                        <p>{props?.location}</p>
-                    </FileSystemLocation>
-                    <FileSystemHeader>
-                        <h4>{props.header}</h4>
-                    </FileSystemHeader>
+        <FileSystemWrapper
+            withBackground={props?.verbose && props.withBackground}
+        >
+            <React.Fragment>
+                <FileSystemLocation verbose={props.verbose}>
+                    <p>{props?.location}</p>
+                    <LocationDot />
+                    <p>{props?.fromTo}</p>
+                </FileSystemLocation>
+                <FileSystemHeader>
+                    <h4>{props.header}</h4>
+                </FileSystemHeader>
+                {
+                    props?.verbose
+                    ? ""
+                    : <FileSystemPosition>{props?.position} {props?.otherPositions && <span>and other positions</span>}</FileSystemPosition>
+                }
+                {props?.verbose ? (
                     <FileSystem>
                         {props.filesArray.length > 1 && (
                             <FileSystemLeft>
@@ -57,7 +59,9 @@ export default function FileSystemBlock(props: any) {
                                             <>
                                                 <FileSystemLine
                                                     key={index}
-                                                    cusHeight={cusHeight[index]}
+                                                    cusHeight={
+                                                        cusHeight[index]
+                                                    }
                                                 />
                                                 <FileSystemButton />
                                             </>
@@ -93,8 +97,10 @@ export default function FileSystemBlock(props: any) {
                             )}
                         </FileSystemRight>
                     </FileSystem>
-                </React.Fragment>
-            )}
+                ) : (
+                    ''
+                )}
+            </React.Fragment>
         </FileSystemWrapper>
     )
 }

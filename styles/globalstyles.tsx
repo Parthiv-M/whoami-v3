@@ -185,11 +185,34 @@ const GlobalStyle = createGlobalStyle`
 
   .generic-container {
     width: 75%;
+    margin-top: 0.5rem;
 
     @media only screen and (max-width: 768px) {
       width: 100%;
       padding: 0 1rem;
     }
+  }
+
+  .verbose .generic-container {
+    margin-top: 0;
+  }
+
+  .verbose {
+    margin: 2rem;
+    border-radius: 1rem;
+    background: rgba(0,0,0,0.05);
+    padding: 3rem 0rem;
+  }
+
+  .minimal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    border-radius: 1rem;
+    background: rgba(0,0,0,0.05);
+    transition: background 2000ms ease-in;
   }
 
   // to remove later

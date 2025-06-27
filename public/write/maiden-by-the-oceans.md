@@ -8,7 +8,7 @@ summary: A solitary maiden bides time yearning for her sailor lost in the deep b
 ---
 
 Beneath the moonless night sky
-Forlorn I stood, awake and in wait of 
+Forlorn I stood, awake and in wait of
 A gruff and tough sailor from lands beyond
 Who held me dearest in his heart
 
@@ -22,7 +22,7 @@ Sail through raging tempests around the world
 I'll make you my queen", the glint in his eyes said,
 "Forever, and forever aye!"
 
-Under the dull green glow of 
+Under the dull green glow of
 The solitary streetlamp on the beach today
 Alone I stood in the silent sands of the night
 Thinking of my lovesick sailor beyond the bay

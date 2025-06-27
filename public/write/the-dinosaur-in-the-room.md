@@ -17,32 +17,30 @@ Today was particularly tiring and I wanted to stay in my little cubicle for the 
 
 A warm breeze blew in through the window. I took a swig of water from my bottle and crossed my arms on the table. I rested my head on my arms, sideways. I could see papers with dinosaur sketches scattered in front of me. They were filled with intricate details about the Rajasaurus—the most famous of Indian dinos.
 
-*“Rajat, wake up!” whispered Saurav, as the teacher entered the class. We had just finished recess and I had momentarily dozed off.*
+_“Rajat, wake up!” whispered Saurav, as the teacher entered the class. We had just finished recess and I had momentarily dozed off._
 
-*“Today,” the teacher announced after everyone settled down, “we shall begin the presentations on the topic I had announced in class the previous week—finding your passion. I hope everyone is prepared for this,” she added, turning around to look at Saurav and me. Both of us looked away, avoiding eye contact.*
+_“Today,” the teacher announced after everyone settled down, “we shall begin the presentations on the topic I had announced in class the previous week—finding your passion. I hope everyone is prepared for this,” she added, turning around to look at Saurav and me. Both of us looked away, avoiding eye contact._
 
-*“And we shall begin with Rajat.”*
+_“And we shall begin with Rajat.”_
 
-*This was exactly what I dreaded. I always made it a point to stay away from anything that involved going up on stage or being in front of people. I had stage-fright, quite evidently, and had it badly. Still, I went up reluctantly, almost dragging myself to the podium in front of the class, and started speaking whatever I had mugged up for the speech.*
+_This was exactly what I dreaded. I always made it a point to stay away from anything that involved going up on stage or being in front of people. I had stage-fright, quite evidently, and had it badly. Still, I went up reluctantly, almost dragging myself to the podium in front of the class, and started speaking whatever I had mugged up for the speech._
 
-*“...ever since the Triassic period, when…umm…two-thirds of land-dwelling species and…ninety-five per cent of aquatic species died out,…umm… dinosaurs have walked the surface of the Earth…”. My disappointing performance definitely belied my passion for dinosaurs but at least got me through my school days with satisfactory grades, albeit accompanied by reproachful glances from my teachers.*
+_“...ever since the Triassic period, when…umm…two-thirds of land-dwelling species and…ninety-five per cent of aquatic species died out,…umm… dinosaurs have walked the surface of the Earth…”. My disappointing performance definitely belied my passion for dinosaurs but at least got me through my school days with satisfactory grades, albeit accompanied by reproachful glances from my teachers._
 
-*When I finally joined college, I was as excited as any new student at Jadhavpur University seemed to be. The numerous possibilities, the unpredictability of college life, and the energy-filled campus enlivened our existences to an extent that I began socialising a bit more than I used to. Slowly but surely, I was getting over my fear of speaking out loud, of vocalising my thoughts in the public sphere. But vestiges of those fears still pulled me back from time to time.*
+_When I finally joined college, I was as excited as any new student at Jadhavpur University seemed to be. The numerous possibilities, the unpredictability of college life, and the energy-filled campus enlivened our existences to an extent that I began socialising a bit more than I used to. Slowly but surely, I was getting over my fear of speaking out loud, of vocalising my thoughts in the public sphere. But vestiges of those fears still pulled me back from time to time._
 
-*I remember this incident from a particular Geology lecture where we were told to express our views on the changing demographics of the Earth during the Jurassic period. “And I repeat,” said Mrs Sharma, our professor, “everyone will, one by one, tell me how the Earth’s continents changed right after the Triassic era. Starting with Rajat.”* 
+_I remember this incident from a particular Geology lecture where we were told to express our views on the changing demographics of the Earth during the Jurassic period. “And I repeat,” said Mrs Sharma, our professor, “everyone will, one by one, tell me how the Earth’s continents changed right after the Triassic era. Starting with Rajat.”_
 
-*It seemed that people who were least reluctant to go were always asked to go first. Not having a choice, I stood up and began to speak, putting together whatever I had learnt in the past few months of college.* 
+_It seemed that people who were least reluctant to go were always asked to go first. Not having a choice, I stood up and began to speak, putting together whatever I had learnt in the past few months of college._
 
-*“...and it was during this period that the supercontinent Pangea split apart…um…giving space for the development of the regions of the Atlantic Ocean and the Gulf of Mexico…” At the end of it, Mrs Sharma looked pleased with my answer. I sat down with a slight thud, feeling a bit proud of myself for being able to complete it with just one stutter along the way. That was definitely progress—a definite improvement from my school days.*
+_“...and it was during this period that the supercontinent Pangea split apart…um…giving space for the development of the regions of the Atlantic Ocean and the Gulf of Mexico…” At the end of it, Mrs Sharma looked pleased with my answer. I sat down with a slight thud, feeling a bit proud of myself for being able to complete it with just one stutter along the way. That was definitely progress—a definite improvement from my school days._
 
-*Years later I finally made it to the prestigious IISER located in Kolkata, known for its palaeontology and biological sciences sections. After spending quite some time travelling across the country under multiple professors and experts, going through innumerable texts, diagrams, and fossils, and learning the art, I was now the one teaching it. Leading it from the front, something I was always scared of.*
+_Years later I finally made it to the prestigious IISER located in Kolkata, known for its palaeontology and biological sciences sections. After spending quite some time travelling across the country under multiple professors and experts, going through innumerable texts, diagrams, and fossils, and learning the art, I was now the one teaching it. Leading it from the front, something I was always scared of._
 
 I opened my eyes to the shrill rings of the telephone on my desk. The dinosaurs were still there, inked out on paper, inanimate yet fascinating. I stretched out my arms and cradled the receiver in my hand and spoke huskily into it, “Professor Rajat speaking. Who’s there?”
 
 “Sir, we are waiting for you. Please come soon,” said the same voice, as enthusiastic as before. I jerked my head upwards to glance at the clock and noticed that it was ten past three in the afternoon. I had dozed off for nearly an hour. “I will join you in 5 minutes. I was caught up with something here in my office,” I added as hastily, as I replaced the receiver and got up from the comfort of my seat.
 
-As I left the cubicle, I could see myself standing in the center of an enthusiastic bunch of college kids, with the same fears I had a few years ago. Contradictorily, now I could visualise myself speaking confidently enough to make them all believe, like all of us always believe, that I had conquered fear. 
+As I left the cubicle, I could see myself standing in the center of an enthusiastic bunch of college kids, with the same fears I had a few years ago. Contradictorily, now I could visualise myself speaking confidently enough to make them all believe, like all of us always believe, that I had conquered fear.
 
 But in reality, just like how dinosaurs evolved and adapted to survive the Cretacous extinction 65 million years ago to persist as birds, my fears had lent wings to my strengths.
-
-

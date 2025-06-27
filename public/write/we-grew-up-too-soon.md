@@ -4,7 +4,7 @@ title: We Grew Up Too Soon
 date: 22-09-2023
 slug: we-grew-up-too-soon
 ttr: 120
-summary: Do we really have to give up on simpler times just to become responsible adults? 
+summary: Do we really have to give up on simpler times just to become responsible adults?
 ---
 
 I crossed out one more square

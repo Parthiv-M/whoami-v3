@@ -59,11 +59,10 @@ const WritingSideBarItem = styled.a<{ active: boolean }>`
     padding: 10px;
     cursor: pointer;
     background: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7'
-            ? 'rgba(0,0,0,0.05)'
-            : 'rgba(0,0,0,0.7)'};
+        theme.bgColor === '#FFEBF7' ? 'rgba(0,0,0,0.05)' : 'rgba(0,0,0,0.7)'};
     border-radius: 10px;
-    border: solid 1px ${({ theme, active }) => active ? "#ff0844" : "transparent"};
+    border: solid 1px
+        ${({ theme, active }) => (active ? '#ff0844' : 'transparent')};
 
     &:hover {
         opacity: 0.8;
@@ -93,9 +92,9 @@ const WritingListItem = styled.div`
     p {
         margin-top: 5px;
         color: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7'
-            ? 'rgba(0,0,0,0.5)'
-            : 'rgba(255,255,255,0.6)'};
+            theme.bgColor === '#FFEBF7'
+                ? 'rgba(0,0,0,0.5)'
+                : 'rgba(255,255,255,0.6)'};
     }
 `
 
@@ -103,16 +102,16 @@ const WritingListItemHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     p {
         font-size: 12px;
         padding: 2px 5px;
         border-radius: 5px;
         margin-left: 2px;
         color: ${({ theme }) =>
-        theme.bgColor === '#FFEBF7'
-            ? 'rgba(0,0,0,0.5)'
-            : 'rgba(255,255,255,0.6)'};
+            theme.bgColor === '#FFEBF7'
+                ? 'rgba(0,0,0,0.5)'
+                : 'rgba(255,255,255,0.6)'};
     }
 `
 
@@ -127,7 +126,7 @@ const MarkdownWriting = styled.div`
 const WriteTitle = styled.h1`
     font-size: 2rem;
     margin-top: 10px;
-`;
+`
 
 const WriteCrumb = styled.pre`
     font-size: 0.9rem;
@@ -137,7 +136,17 @@ const WriteCrumb = styled.pre`
         text-decoration: underline;
         color: inherit;
     }
-
 `
 
-export { WritingWrapper, WritingSection, WritingSideBar, WritingList, WritingSideBarItem, WritingListItem, WritingListItemHeader, MarkdownWriting, WriteTitle, WriteCrumb }
+export {
+    WritingWrapper,
+    WritingSection,
+    WritingSideBar,
+    WritingList,
+    WritingSideBarItem,
+    WritingListItem,
+    WritingListItemHeader,
+    MarkdownWriting,
+    WriteTitle,
+    WriteCrumb,
+}

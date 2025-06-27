@@ -4,6 +4,8 @@ import GlobalStyle from '../styles/globalstyles'
 import { useTheme } from '../hooks/useTheme'
 import FloatingNavbar from '../components/FloatingNavbar'
 import Footer from '../components/Footer'
+import FloatingVerbose from '../components/FloatingVerbose'
+import { useVerbose } from '../hooks/useVerbose'
 
 const lightTheme: DefaultTheme = {
     colors: {
@@ -31,12 +33,14 @@ const darkTheme: DefaultTheme = {
 
 export default function App({ Component, pageProps }: AppProps) {
     const [theme, toggleTheme] = useTheme()
+    const [isChecked, handleToggle] = useVerbose()
     return (
         <>
             <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
                 <GlobalStyle />
                 <FloatingNavbar theme={theme} toggleTheme={toggleTheme} />
-                <Component {...pageProps} />
+                <Component {...pageProps} verbose={isChecked} />
+                <FloatingVerbose checked={isChecked} onChange={handleToggle} />
                 <Footer />
             </ThemeProvider>
         </>

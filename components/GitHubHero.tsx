@@ -1,4 +1,6 @@
 import {
+    SiAmazonaws,
+    SiApache,
     SiFramer,
     SiGnubash,
     SiGo,
@@ -12,8 +14,11 @@ import {
     SiPm2,
     SiPrisma,
     SiPython,
+    SiReact,
     SiSymfony,
     SiTailwindcss,
+    SiTerraform,
+    SiTypescript,
     SiWikidata,
     SiWikimediacommons,
     SiWireshark,
@@ -61,6 +66,92 @@ export default function GitHubHero() {
                     <GitHubSubText>is where I keep</GitHubSubText>
                     <GitHubSubText>track of my tech projects</GitHubSubText>
                     <ProjectLinkArea className="mt-3">
+                        <div className="position-relative">
+                            <a
+                                href="https://github.com/parthiv-m/debrief"
+                                onMouseEnter={(e) => handleEnter(e, 'debrief')}
+                                onMouseLeave={(e) => handleLeave(e, 'debrief')}
+                            >
+                                debrief
+                            </a>
+                            <ProjectLinkDescription id="debrief">
+                                <ProjectDescriptionHeader>
+                                    <h6>Debrief</h6>
+                                    <div className="d-flex gap-1">
+                                        <SiPython size={16} />
+                                        <SiTypescript size={16} />
+                                    </div>
+                                </ProjectDescriptionHeader>
+                                <p className="mt-3">
+                                    A Chrome extension that runs OpenAI in the
+                                    background to summarise and provide
+                                    meta-data about webpages in the search
+                                    results page.
+                                </p>
+                            </ProjectLinkDescription>
+                        </div>
+                        <div className="position-relative">
+                            <a
+                                href="https://visualdomesticlaborhistory.khoury.northeastern.edu"
+                                onMouseEnter={(e) =>
+                                    handleEnter(e, 'visual-khoury')
+                                }
+                                onMouseLeave={(e) =>
+                                    handleLeave(e, 'visual-khoury')
+                                }
+                            >
+                                digital-humanities-northeastern
+                            </a>
+                            <ProjectLinkDescription id="visual-khoury">
+                                <ProjectDescriptionHeader>
+                                    <h6>
+                                        Digital Humanities Project @
+                                        Northeastern
+                                    </h6>
+                                    <div className="d-flex gap-1">
+                                        <SiTypescript size={16} />
+                                        <SiReact size={16} />
+                                        <SiTailwindcss size={16} />
+                                        <SiApache size={16} />
+                                        <SiPm2 size={16} />
+                                    </div>
+                                </ProjectDescriptionHeader>
+                                <p className="mt-3">
+                                    A full stack dashboard with layered
+                                    information architecture for visualizing
+                                    postcards and tradecards with sensitive
+                                    information built with MERN stack and ShadCN
+                                    components.
+                                </p>
+                            </ProjectLinkDescription>
+                        </div>
+                        <div className="position-relative">
+                            <a
+                                href="https://github.com/parthiv-m/fluff"
+                                onMouseEnter={(e) => handleEnter(e, 'fluff')}
+                                onMouseLeave={(e) => handleLeave(e, 'fluff')}
+                            >
+                                fluff
+                            </a>
+                            <ProjectLinkDescription id="fluff">
+                                <ProjectDescriptionHeader>
+                                    <h6>Cloud Native Pastebin</h6>
+                                    <div className="d-flex gap-1">
+                                        <SiTypescript size={16} />
+                                        <SiTerraform size={16} />
+                                        <SiNextdotjs size={16} />
+                                        <SiAmazonaws size={16} />
+                                    </div>
+                                </ProjectDescriptionHeader>
+                                <p className="mt-3">
+                                    A cloud native pastebin that utilizes AWS
+                                    DynamoDB, Lambda functions, an API gateway
+                                    to store and interact with pastes and an S3
+                                    bucket to serve a web app for UI
+                                    interactivity.
+                                </p>
+                            </ProjectLinkDescription>
+                        </div>
                         <div className="position-relative">
                             <a
                                 href="https://github.com/parthiv-m/sea-shell"

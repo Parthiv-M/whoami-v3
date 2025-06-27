@@ -49,10 +49,9 @@ import {
 import IconWithTooltip from '../components/IconWithTooltip'
 import GitHubHero from '../components/GitHubHero'
 import FileSystemBlock from '../components/FileSystem'
-import { FileSystemHolder, Sticker } from '../styles/filesystem'
+import { FileSystemHolder } from '../styles/filesystem'
 import { ResumeButton, ResumeSection } from '../styles/resume'
 import { useEffect, useState } from 'react'
-import StickerHeader from '../components/Sticker'
 import {
     MoreCard,
     MoreCardHeader,
@@ -281,22 +280,26 @@ export default function Index(props: any) {
                 </div>
             </SkillsWrapper>
             <GitHubHero />
-            <div>
-                <StickerHeader id="clubs">
-                    <SubSectionHeader>
-                        <h2>
-                            I was very <span>active</span> in{' '}
-                            <span>college</span> clubs...
-                        </h2>
-                    </SubSectionHeader>
-                </StickerHeader>
+            <div className={props?.verbose ? 'verbose': 'minimal'}>
+                {props?.verbose && (
+                        <SubSectionHeader>
+                            <h2>
+                                I was very <span>active</span> in{' '}
+                                <span>college</span> clubs...
+                            </h2>
+                        </SubSectionHeader>
+                )}
                 <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                     <FileSystemHolder>
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             isImage={false}
+                            fromTo={json?.clubs?.mist?.fromTo}
                             withBackground
                             header={'Manipal Information Security Team'}
                             location={json?.clubs?.mist?.location}
+                            position={json?.clubs?.mist?.positionForMinimal}
+                            otherPositions={json?.clubs?.mist?.otherPositions}
                             filesArray={[
                                 {
                                     fileName: 'Web Development Head',
@@ -322,10 +325,14 @@ export default function Index(props: any) {
                             ]}
                         />
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             isImage={false}
+                            fromTo={json?.clubs?.mitpost?.fromTo}
                             withBackground
                             header={'The MIT Post'}
                             location={json?.clubs?.mitpost?.location}
+                            position={json?.clubs?.mitpost?.positionForMinimal}
+                            otherPositions={json?.clubs?.mitpost?.otherPositions}
                             filesArray={[
                                 {
                                     fileName: 'Revels and TechTatva',
@@ -352,9 +359,13 @@ export default function Index(props: any) {
                     </FileSystemHolder>
                     <FileSystemHolder>
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             isImage={false}
                             header={"Linux Users' Group"}
+                            fromTo={json?.clubs?.lug?.fromTo}
                             location={json?.clubs?.lug?.location}
+                            position={json?.clubs?.lug?.positionForMinimal}
+                            otherPositions={json?.clubs?.lug?.otherPositions}
                             filesArray={[
                                 {
                                     fileName: 'Core Committee Member',
@@ -369,9 +380,13 @@ export default function Index(props: any) {
                             ]}
                         />
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             isImage={false}
                             withBackground
+                            fromTo={json?.clubs?.ecell?.fromTo}
                             header={'Entrepreneurship Cell, Manipal'}
+                            position={json?.clubs?.ecell?.positionForMinimal}
+                            otherPositions={json?.clubs?.ecell?.otherPositions}
                             location={json?.clubs?.ecell?.location}
                             filesArray={[
                                 {
@@ -395,20 +410,24 @@ export default function Index(props: any) {
                         />
                     </FileSystemHolder>
                 </div>
-                <StickerHeader id="work">
-                    <SubSectionHeader>
-                        <h2>
-                            ...and got to <span>work</span> at some{' '}
-                            <span>amazing</span> places...
-                        </h2>
-                    </SubSectionHeader>
-                </StickerHeader>
+                {props?.verbose && (
+                        <SubSectionHeader>
+                            <h2>
+                                ...and got to <span>work</span> at some{' '}
+                                <span>amazing</span> places...
+                            </h2>
+                        </SubSectionHeader>
+                )}
                 <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                     <FileSystemHolder>
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             isImage={false}
+                            fromTo={json?.work?.wmf?.fromTo}
                             header={'Wikimedia Foundation'}
                             location={json?.work?.wmf?.location}
+                            position={json?.work?.wmf?.positionForMinimal}
+                            otherPositions={json?.work?.wmf?.otherPositions}
                             filesArray={[
                                 {
                                     fileName: 'Wikisource Technical Fellow',
@@ -429,32 +448,17 @@ export default function Index(props: any) {
                                 },
                             ]}
                         />
-                        <FileSystemBlock
-                            isImage={false}
-                            withBackground
-                            header={'Innovation Center, Manipal'}
-                            location={json?.work?.ic?.location}
-                            filesArray={[
-                                {
-                                    fileName:
-                                        'Co-founder and Developer, Dotfood',
-                                    fileId: 'dotfood',
-                                    content: json?.work?.ic?.dotfood,
-                                },
-                                {
-                                    fileName: 'Full stack developer',
-                                    fileId: 'kmc',
-                                    content: json?.work?.ic?.kmc,
-                                },
-                            ]}
-                        />
                     </FileSystemHolder>
                     <FileSystemHolder>
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             isImage={false}
                             withBackground
+                            fromTo={json?.work?.iisc?.fromTo}
                             header={'IISc Bangalore'}
                             location={json?.work?.iisc?.location}
+                            position={json?.work?.iisc?.positionForMinimal}
+                            otherPositions={json?.work?.iisc?.otherPositions}
                             filesArray={[
                                 {
                                     fileName:
@@ -464,27 +468,27 @@ export default function Index(props: any) {
                                 },
                             ]}
                         />
-                        <FileSystemBlock
-                            isImage={true}
-                            imageUrl={'/images/work.svg'}
-                            filesArray={[]}
-                        />
                     </FileSystemHolder>
                 </div>
-                <StickerHeader id="research">
+                {props?.verbose && (
                     <SubSectionHeader>
                         <h2>
-                            ...while also spending time on <span>research</span>
+                            ...while also spending time on{' '}
+                            <span>research</span>
                             ...
                         </h2>
                     </SubSectionHeader>
-                </StickerHeader>
+                )}
                 <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
                     <FileSystemHolder>
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             withBackground
                             header={'MITACS Globalink Research Intern'}
                             location={json?.research?.mitacs?.location}
+                            position={json?.research?.mitacs?.positionForMinimal}
+                            otherPositions={json?.research?.mitacs?.otherPositions}
+                            fromTo={json?.research?.mitacs?.fromTo}
                             filesArray={[
                                 {
                                     fileName: 'Researcher, Lakehead University',
@@ -502,8 +506,12 @@ export default function Index(props: any) {
                     </FileSystemHolder>
                     <FileSystemHolder>
                         <FileSystemBlock
+                            verbose={props?.verbose}
                             header={'Research Collaborator at MIT, Manipal'}
                             location={json?.research?.manipal?.location}
+                            fromTo={json?.research?.manipal?.fromTo}
+                            position={json?.research?.manipal?.positionForMinimal}
+                            otherPositions={json?.research?.manipal?.otherPositions}
                             filesArray={[
                                 {
                                     fileName:
@@ -516,42 +524,6 @@ export default function Index(props: any) {
                                         'Real-Time Portfolio Management System Utilizing Machine Learning Techniques',
                                     fileId: 'portfolio',
                                     content: json?.research?.manipal?.second,
-                                },
-                            ]}
-                        />
-                    </FileSystemHolder>
-                </div>
-                <StickerHeader id="opensource">
-                    <SubSectionHeader>
-                        <h2>
-                            ...and <span>dabbling</span> in open source!
-                        </h2>
-                    </SubSectionHeader>
-                </StickerHeader>
-                <div className="generic-container mx-auto d-flex flex-md-row flex-column gap-2">
-                    <FileSystemHolder>
-                        <FileSystemBlock
-                            header={'Mentor, Outreachy, December Cohort'}
-                            location={json?.opensource?.outreachy?.location}
-                            filesArray={[
-                                {
-                                    fileName: 'Project Co-Mentor, WMF',
-                                    fileId: 'outreachy',
-                                    content: json?.opensource?.outreachy?.work,
-                                },
-                            ]}
-                        />
-                    </FileSystemHolder>
-                    <FileSystemHolder>
-                        <FileSystemBlock
-                            withBackground
-                            header={'Kubernetes Community Days, Bengaluru 2023'}
-                            location={json?.opensource?.kcd?.location}
-                            filesArray={[
-                                {
-                                    fileName: 'Volunteer, Organising Team',
-                                    fileId: 'kcd',
-                                    content: json?.opensource?.kcd?.work,
                                 },
                             ]}
                         />
